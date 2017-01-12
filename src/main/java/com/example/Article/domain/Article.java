@@ -17,7 +17,6 @@ public class Article {
 	private Long id;
 	private String name;
 	private double dmg;
-	private int uaId;
 	private boolean UA = false;
 	
 	public Article(){
@@ -55,14 +54,6 @@ public class Article {
 		this.dmg = dmg;
 	}
 	
-	
-	public double getUaId() {
-		return this.uaId;
-	}
-	
-	public void setUaId(int ua) {
-		this.uaId = ua;
-	}
 
 	public boolean isUA() {
 		return UA;

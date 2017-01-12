@@ -85,4 +85,16 @@ public class ArticleManagerTest {
 		assertEquals(articleR.getName(),articleF.getName());
 		assertEquals(articleR.getDmg(),articleF.getDmg());
 	}
+	
+	@Test
+	public void findUniqueAbilityById(){
+		UniqueAbility uniqueAbilityF = articleManager.getAllUniqueAbility().get(0);
+		
+		UniqueAbility uniqueAbility = articleManager.findUniqueAbilityById(uniqueAbilityF.getId());
+		
+		assertEquals(uniqueAbility.getName(),uniqueAbilityF.getName());
+		assertEquals(uniqueAbility.getLevel(),uniqueAbilityF.getLevel());
+		assertEquals(uniqueAbility.getMagic(),uniqueAbilityF.getMagic());
+		assertEquals(uniqueAbility.getPower(),uniqueAbilityF.getPower());
+	}
 }
