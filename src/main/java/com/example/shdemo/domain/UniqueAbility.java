@@ -28,6 +28,18 @@ public class UniqueAbility {
 	private int level;
 	private List<Article> articles = new ArrayList<Article>();
 	
+	public UniqueAbility(){
+		
+	}
+	
+	public UniqueAbility(boolean magic, double power, String desc, int level){
+		super();
+		this.magic = magic;
+		this.power = power;
+		this.desc = desc;
+		this.level = level;
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public int getId() {
@@ -70,7 +82,7 @@ public class UniqueAbility {
 	public void setLevel(int level) {
 		this.level = level;
 	}
-//	
+
 	public void setArticle(List<Article> articles) {
 		this.articles = articles;
 	}
@@ -79,5 +91,4 @@ public class UniqueAbility {
 	public List<Article> getArticle() {
 		return articles;
 	}
-//	
 }
