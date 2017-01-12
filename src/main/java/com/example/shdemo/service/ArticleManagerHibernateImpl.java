@@ -1,27 +1,105 @@
-//package com.example.shdemo.service;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//
-//import org.hibernate.SessionFactory;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.stereotype.Component;
-//import org.springframework.transaction.annotation.Transactional;
-//
-//import com.example.shdemo.domain.Car;
-//import com.example.shdemo.domain.Person;
-//
-//@Component
-//@Transactional
-//public class SellingMangerHibernateImpl implements SellingManager {
-//
-//	@Autowired
-//	private SessionFactory sessionFactory;
-//
-//	public SessionFactory getSessionFactory() {
-//		return sessionFactory;
-//	}
-//
+package com.example.shdemo.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.example.shdemo.domain.Article;
+import com.example.shdemo.domain.UniqueAbility;
+
+@Component
+@Transactional
+public class ArticleManagerHibernateImpl implements ArticleManager {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	@Override
+	public int addArticle(Article article) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean updateArticle(Article article) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void deleteArticle(Article article) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Article findArticleById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Article> getAllArticle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Article> getRareArticles(boolean rare) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Article> getNotRareArticle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addUniqueAbility(UniqueAbility uniqueAbility) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean updateUniqueAbility(UniqueAbility uniqueAbility) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void deleteUniqueAbility(UniqueAbility uniqueAbility) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public UniqueAbility findUniqueAbilityByLevel(int level) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UniqueAbility findUniqueAbilityById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<UniqueAbility> getAllUniqueAbility() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 //	public void setSessionFactory(SessionFactory sessionFactory) {
 //		this.sessionFactory = sessionFactory;
 //	}
@@ -115,5 +193,5 @@
 //	public Car findCarById(Long id) {
 //		return (Car) sessionFactory.getCurrentSession().get(Car.class, id);
 //	}
-//
-//}
+
+}
