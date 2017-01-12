@@ -1,4 +1,4 @@
-package com.example.shdemo.service;
+package com.example.Article.service;
 
 import java.util.List;
 
@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.shdemo.domain.Article;
-import com.example.shdemo.domain.UniqueAbility;
+import com.example.Article.domain.Article;
+import com.example.Article.domain.UniqueAbility;
+import com.example.Article.service.*;
+
 
 @Component
 @Transactional
@@ -16,15 +18,25 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 
 	@Autowired
 	private SessionFactory sessionFactory;
+	
+	public void setSessionFactory(SessionFactory sessionFactory){
+		this.sessionFactory = sessionFactory;
+	}
 
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
+	
+	@Override
+	public void addUniqueAbility(UniqueAbility uniqueAbility) {
+		uniqueAbility.setId(null);
+		sessionFactory.getCurrentSession().persist(uniqueAbility);
+	}
 
 	@Override
-	public int addArticle(Article article) {
+	public Long addArticle(Article article) {
 		article.setId(null);
-		return 0;
+		return (Long) sessionFactory.getCurrentSession().save(article);
 	}
 
 	@Override
@@ -68,11 +80,6 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 		return sessionFactory.getCurrentSession().getNamedQuery("article.all").list();
 	}
 
-	@Override
-	public void addUniqueAbility(UniqueAbility uniqueAbility) {
-		uniqueAbility.setId(null);
-		sessionFactory.getCurrentSession().persist(uniqueAbility);
-	}
 
 	@Override
 	public boolean updateUniqueAbility(UniqueAbility uniqueAbility) {
@@ -96,7 +103,7 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 
 	@Override
 	public UniqueAbility findUniqueAbilityByName(String name) {
-		return (UniqueAbility) sessionFactory.getCurrentSession().getNamedQuery("uniqueAbility.byPower").setString("name", name).uniqueResult();
+		return (UniqueAbility) sessionFactory.getCurrentSession().getNamedQuery("uniqueAbility.byname").setString("name", name).uniqueResult();
 	}
 
 	@Override
@@ -118,7 +125,7 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Article> getNotaveUAArticles() {
+	public List<Article> getNotHaveUAArticles() {
 		return sessionFactory.getCurrentSession().getNamedQuery("article.notHaveUA").list();
 	}
 

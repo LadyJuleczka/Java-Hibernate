@@ -1,7 +1,8 @@
-package com.example.shdemo.domain;
+package com.example.Article.domain;
+
 import java.util.ArrayList;
 import java.util.List;
-import com.example.shdemo.domain.Article;
+import com.example.Article.domain.Article;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,8 +16,8 @@ import javax.persistence.OneToMany;
 
 @Entity
 @NamedQueries({
-@NamedQuery(name = "uniqueAbility.all", query = "Select a from UniqueAbility a"),
-@NamedQuery(name = "uniqueAbility.byname", query = "Select a from UniqueAbility a where a.name = :name"),
+	@NamedQuery(name = "uniqueAbility.all", query = "Select a from UniqueAbility a"),
+	@NamedQuery(name = "uniqueAbility.byname", query = "Select a from UniqueAbility a where a.name = :name"),
 })
 
 public class UniqueAbility {
