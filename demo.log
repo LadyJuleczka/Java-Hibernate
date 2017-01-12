@@ -5849,3 +5849,1762 @@ Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for 
 	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
 	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
 	... 74 more
+2017-01-12 12:19:50,097 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-12 12:19:50,101 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-12 12:19:50,101 INFO  [Environment]  - hibernate.properties not found
+2017-01-12 12:19:50,108 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-12 12:19:50,109 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-12 12:19:50,236 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:19:50,248 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:19:50,250 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:19:50,275 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:19:50,326 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:19:50,326 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:19:50,326 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:19:50,332 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:19:50,374 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:19:50,382 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:19:50,386 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:19:50,758 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:19:50,784 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:19:50,788 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:19:50,793 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:19:50,794 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:19:50,794 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:19:50,794 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:19:50,794 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:19:50,794 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:19:50,795 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:19:50,795 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:19:50,795 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:19:50,796 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:19:50,796 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:19:50,797 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:19:50,797 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:19:50,797 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:19:50,798 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:19:50,798 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:19:50,798 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:19:50,799 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:19:50,799 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:19:50,799 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:19:50,800 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:19:50,800 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:19:50,802 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:19:50,803 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:19:50,803 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:19:50,803 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:19:50,803 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:19:50,803 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:19:50,813 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:19:50,822 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@6f5db5
+2017-01-12 12:19:50,823 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@6f5db5
+2017-01-12 12:19:50,823 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@171340b
+2017-01-12 12:19:50,823 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@171340b
+2017-01-12 12:19:50,827 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1e66ad5
+2017-01-12 12:19:50,827 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@6ff930
+2017-01-12 12:19:50,828 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@150d51a
+2017-01-12 12:19:50,828 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1d6d501
+2017-01-12 12:19:50,829 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@13a38ac
+2017-01-12 12:19:50,881 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@bde97a] to prepare test instance [com.example.Article.service.ArticleManagerTest@2b6ff2]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
+2017-01-12 12:19:50,947 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:19:50,947 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:19:50,948 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:19:50,948 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:19:50,949 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:19:50,949 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:19:50,949 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:19:50,950 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:19:50,952 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:19:50,954 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:19:50,954 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:19:51,162 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:19:51,165 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:19:51,165 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:19:51,166 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:19:51,167 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:19:51,168 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:19:51,168 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:19:51,169 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:19:51,169 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:19:51,170 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:19:51,170 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:19:51,170 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:19:51,171 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:19:51,171 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:19:51,172 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:19:51,172 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:19:51,173 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:19:51,173 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:19:51,175 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:19:51,175 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:19:51,176 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:19:51,185 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:19:51,186 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:19:51,187 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:19:51,187 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:19:51,187 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:19:51,188 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:19:51,188 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:19:51,188 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:19:51,189 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:19:51,189 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:19:51,202 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:19:51,202 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@6f5db5
+2017-01-12 12:19:51,203 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@6f5db5
+2017-01-12 12:19:51,203 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@171340b
+2017-01-12 12:19:51,203 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@171340b
+2017-01-12 12:19:51,203 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1e66ad5
+2017-01-12 12:19:51,203 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@6ff930
+2017-01-12 12:19:51,204 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@150d51a
+2017-01-12 12:19:51,204 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1d6d501
+2017-01-12 12:19:51,204 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@13a38ac
+2017-01-12 12:19:51,209 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@bde97a] to prepare test instance [com.example.Article.service.ArticleManagerTest@1b28af6]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
+2017-01-12 12:19:51,283 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:19:51,283 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:19:51,283 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:19:51,284 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:19:51,285 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:19:51,285 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:19:51,285 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:19:51,286 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:19:51,288 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:19:51,289 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:19:51,290 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:19:51,495 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:19:51,499 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:19:51,499 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:19:51,502 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:19:51,503 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:19:51,504 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:19:51,506 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:19:51,507 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:19:51,507 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:19:51,509 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:19:51,509 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:19:51,511 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:19:51,511 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:19:51,515 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:19:51,517 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:19:51,518 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:19:51,519 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:19:51,520 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:19:51,521 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:19:51,522 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:19:51,522 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:19:51,522 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:19:51,523 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:19:51,523 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:19:51,523 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:19:51,523 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:19:51,524 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:19:51,524 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:19:51,525 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:19:51,526 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:19:51,526 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:19:51,542 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:19:51,543 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@6f5db5
+2017-01-12 12:19:51,543 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@6f5db5
+2017-01-12 12:19:51,544 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@171340b
+2017-01-12 12:19:51,544 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@171340b
+2017-01-12 12:19:51,544 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1e66ad5
+2017-01-12 12:19:51,544 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@6ff930
+2017-01-12 12:19:51,545 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@150d51a
+2017-01-12 12:19:51,545 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1d6d501
+2017-01-12 12:19:51,545 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@13a38ac
+2017-01-12 12:19:51,547 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@bde97a] to prepare test instance [com.example.Article.service.ArticleManagerTest@ca29b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
+2017-01-12 12:19:51,605 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:19:51,605 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:19:51,605 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:19:51,605 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:19:51,606 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:19:51,606 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:19:51,606 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:19:51,607 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:19:51,608 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:19:51,609 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:19:51,610 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:19:51,821 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:19:51,825 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:19:51,825 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:19:51,827 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:19:51,828 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:19:51,828 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:19:51,829 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:19:51,829 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:19:51,830 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:19:51,831 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:19:51,831 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:19:51,832 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:19:51,837 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:19:51,837 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:19:51,838 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:19:51,839 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:19:51,839 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:19:51,840 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:19:51,841 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:19:51,841 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:19:51,842 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:19:51,842 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:19:51,843 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:19:51,844 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:19:51,845 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:19:51,846 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:19:51,846 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:19:51,847 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:19:51,848 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:19:51,851 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:19:51,856 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:19:51,869 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:19:51,874 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@6f5db5
+2017-01-12 12:19:51,875 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@6f5db5
+2017-01-12 12:19:51,875 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@171340b
+2017-01-12 12:19:51,875 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@171340b
+2017-01-12 12:19:51,876 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1e66ad5
+2017-01-12 12:19:51,876 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@6ff930
+2017-01-12 12:19:51,876 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@150d51a
+2017-01-12 12:19:51,876 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1d6d501
+2017-01-12 12:19:51,877 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@13a38ac
+2017-01-12 12:19:51,878 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@bde97a] to prepare test instance [com.example.Article.service.ArticleManagerTest@18ccd00]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
+2017-01-12 12:19:51,929 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:19:51,929 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:19:51,930 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:19:51,930 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:19:51,931 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:19:51,931 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:19:51,931 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:19:51,931 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:19:51,933 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:19:51,934 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:19:51,934 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:19:52,142 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:19:52,146 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:19:52,147 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:19:52,149 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:19:52,150 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:19:52,151 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:19:52,151 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:19:52,152 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:19:52,152 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:19:52,153 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:19:52,156 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:19:52,157 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:19:52,158 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:19:52,159 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:19:52,160 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:19:52,160 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:19:52,161 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:19:52,161 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:19:52,162 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:19:52,162 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:19:52,163 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:19:52,163 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:19:52,166 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:19:52,167 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:19:52,167 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:19:52,168 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:19:52,172 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:19:52,172 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:19:52,178 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:19:52,179 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:19:52,180 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:19:52,188 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:19:52,195 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@6f5db5
+2017-01-12 12:19:52,195 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@6f5db5
+2017-01-12 12:19:52,195 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@171340b
+2017-01-12 12:19:52,195 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@171340b
+2017-01-12 12:19:52,196 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@1e66ad5
+2017-01-12 12:19:52,196 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@6ff930
+2017-01-12 12:19:52,196 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@150d51a
+2017-01-12 12:19:52,196 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1d6d501
+2017-01-12 12:19:52,196 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@13a38ac
+2017-01-12 12:19:52,198 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@bde97a] to prepare test instance [com.example.Article.service.ArticleManagerTest@182db47]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
+2017-01-12 12:31:41,116 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-12 12:31:41,120 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-12 12:31:41,121 INFO  [Environment]  - hibernate.properties not found
+2017-01-12 12:31:41,123 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-12 12:31:41,124 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-12 12:31:41,188 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:31:41,196 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:31:41,196 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:31:41,210 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:31:41,236 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:31:41,237 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:31:41,237 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:31:41,237 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:31:41,263 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:31:41,266 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:31:41,270 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:31:41,555 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:31:41,592 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:41,592 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:41,593 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:31:41,594 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:31:41,594 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:31:41,594 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:31:41,594 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:31:41,594 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:31:41,594 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:31:41,595 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:31:41,595 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:31:41,595 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:31:41,595 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:31:41,595 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:31:41,595 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:31:41,595 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:31:41,601 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:31:41,603 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:31:41,603 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:31:41,603 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:31:41,603 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:31:41,603 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:31:41,604 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:31:41,604 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:31:41,612 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:31:41,613 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:31:41,613 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:31:41,613 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:31:41,613 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:31:41,613 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:31:41,623 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:31:41,626 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@13a38ac
+2017-01-12 12:31:41,626 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:41,626 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:41,629 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:41,629 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:41,629 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@ba0e25
+2017-01-12 12:31:41,629 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f6acd8
+2017-01-12 12:31:41,630 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@cdaff7
+2017-01-12 12:31:41,630 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1dbbe10
+2017-01-12 12:31:41,672 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1dddbab] to prepare test instance [com.example.Article.service.ArticleManagerTest@80e6ab]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
+2017-01-12 12:31:41,730 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:31:41,730 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:31:41,731 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:31:41,731 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:31:41,732 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:31:41,736 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:31:41,736 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:31:41,737 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:31:41,740 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:31:41,741 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:31:41,742 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:31:41,948 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:31:41,952 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:41,953 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:41,955 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:31:41,957 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:31:41,958 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:31:41,958 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:31:41,959 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:31:41,963 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:31:41,964 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:31:41,965 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:31:41,966 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:31:41,966 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:31:41,967 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:31:41,968 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:31:41,969 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:31:41,969 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:31:41,970 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:31:41,971 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:31:41,971 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:31:41,972 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:31:41,973 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:31:41,973 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:31:41,983 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:31:41,984 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:31:41,988 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:31:41,988 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:31:41,989 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:31:41,989 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:31:41,990 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:31:41,990 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:31:42,009 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:31:42,009 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@13a38ac
+2017-01-12 12:31:42,009 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:42,010 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:42,010 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:42,010 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:42,010 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@ba0e25
+2017-01-12 12:31:42,010 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f6acd8
+2017-01-12 12:31:42,011 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@cdaff7
+2017-01-12 12:31:42,011 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1dbbe10
+2017-01-12 12:31:42,014 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1dddbab] to prepare test instance [com.example.Article.service.ArticleManagerTest@65c3cc]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
+2017-01-12 12:31:42,084 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:31:42,084 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:31:42,084 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:31:42,084 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:31:42,086 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:31:42,086 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:31:42,086 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:31:42,086 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:31:42,089 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:31:42,090 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:31:42,090 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:31:42,297 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:31:42,300 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:42,302 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:42,304 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:31:42,305 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:31:42,305 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:31:42,310 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:31:42,310 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:31:42,310 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:31:42,311 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:31:42,311 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:31:42,311 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:31:42,311 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:31:42,312 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:31:42,312 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:31:42,313 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:31:42,313 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:31:42,313 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:31:42,314 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:31:42,314 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:31:42,314 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:31:42,314 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:31:42,315 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:31:42,315 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:31:42,315 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:31:42,316 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:31:42,316 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:31:42,316 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:31:42,318 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:31:42,318 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:31:42,319 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:31:42,335 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:31:42,338 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@13a38ac
+2017-01-12 12:31:42,339 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:42,339 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:42,339 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:42,339 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:42,339 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@ba0e25
+2017-01-12 12:31:42,339 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f6acd8
+2017-01-12 12:31:42,340 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@cdaff7
+2017-01-12 12:31:42,340 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1dbbe10
+2017-01-12 12:31:42,341 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1dddbab] to prepare test instance [com.example.Article.service.ArticleManagerTest@4f642c]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
+2017-01-12 12:31:42,397 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:31:42,397 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:31:42,397 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:31:42,397 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:31:42,398 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:31:42,399 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:31:42,399 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:31:42,399 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:31:42,400 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:31:42,401 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:31:42,402 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:31:42,608 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:31:42,611 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:42,613 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:42,614 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:31:42,615 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:31:42,617 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:31:42,617 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:31:42,618 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:31:42,622 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:31:42,623 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:31:42,624 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:31:42,624 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:31:42,625 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:31:42,625 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:31:42,626 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:31:42,627 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:31:42,628 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:31:42,628 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:31:42,629 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:31:42,629 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:31:42,630 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:31:42,631 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:31:42,631 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:31:42,632 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:31:42,633 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:31:42,644 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:31:42,644 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:31:42,644 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:31:42,644 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:31:42,645 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:31:42,645 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:31:42,655 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:31:42,660 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@13a38ac
+2017-01-12 12:31:42,660 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:42,661 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:42,661 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:42,661 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:42,661 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@ba0e25
+2017-01-12 12:31:42,661 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f6acd8
+2017-01-12 12:31:42,662 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@cdaff7
+2017-01-12 12:31:42,662 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1dbbe10
+2017-01-12 12:31:42,663 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1dddbab] to prepare test instance [com.example.Article.service.ArticleManagerTest@153f5e2]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
+2017-01-12 12:31:42,704 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:31:42,704 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:31:42,704 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:31:42,705 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:31:42,705 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:31:42,705 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:31:42,705 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:31:42,705 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:31:42,707 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:31:42,708 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:31:42,708 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:31:42,922 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:31:42,926 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:42,926 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:42,928 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:31:42,928 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:31:42,929 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:31:42,930 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:31:42,931 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:31:42,931 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:31:42,932 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:31:42,933 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:31:42,933 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:31:42,934 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:31:42,938 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:31:42,939 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:31:42,940 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:31:42,941 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:31:42,942 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:31:42,942 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:31:42,943 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:31:42,943 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:31:42,944 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:31:42,947 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:31:42,947 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:31:42,948 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:31:42,948 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:31:42,949 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:31:42,960 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:31:42,961 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:31:42,961 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:31:42,962 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:31:42,972 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:31:42,975 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@13a38ac
+2017-01-12 12:31:42,975 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:42,975 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:42,975 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:42,976 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:42,976 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@ba0e25
+2017-01-12 12:31:42,976 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f6acd8
+2017-01-12 12:31:42,976 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@cdaff7
+2017-01-12 12:31:42,976 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1dbbe10
+2017-01-12 12:31:42,977 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1dddbab] to prepare test instance [com.example.Article.service.ArticleManagerTest@1204ae6]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
+2017-01-12 12:31:43,029 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.Article
+2017-01-12 12:31:43,030 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-12 12:31:43,030 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select a from Article a where a.UA = false
+2017-01-12 12:31:43,031 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.Article on table Article
+2017-01-12 12:31:43,031 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.Article.domain.UniqueAbility
+2017-01-12 12:31:43,031 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select a from UniqueAbility a
+2017-01-12 12:31:43,032 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select a from UniqueAbility a where a.name = :name
+2017-01-12 12:31:43,032 INFO  [EntityBinder]  - Bind entity com.example.Article.domain.UniqueAbility on table UniqueAbility
+2017-01-12 12:31:43,033 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-12 12:31:43,034 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-12 12:31:43,034 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-12 12:31:43,239 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-12 12:31:43,249 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:43,253 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-12 12:31:43,258 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-12 12:31:43,258 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-12 12:31:43,258 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-12 12:31:43,258 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-12 12:31:43,258 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-12 12:31:43,259 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-12 12:31:43,259 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-12 12:31:43,259 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-12 12:31:43,259 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-12 12:31:43,259 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-12 12:31:43,259 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-12 12:31:43,259 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-12 12:31:43,260 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-12 12:31:43,260 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-12 12:31:43,260 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-12 12:31:43,260 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-12 12:31:43,260 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-12 12:31:43,260 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-12 12:31:43,260 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-12 12:31:43,261 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-12 12:31:43,261 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-12 12:31:43,261 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-12 12:31:43,261 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-12 12:31:43,261 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-12 12:31:43,261 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-12 12:31:43,261 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-12 12:31:43,268 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-12 12:31:43,269 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-12 12:31:43,277 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-12 12:31:43,280 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@13a38ac
+2017-01-12 12:31:43,282 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:43,282 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@15eb959
+2017-01-12 12:31:43,282 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:43,282 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@886d36
+2017-01-12 12:31:43,283 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@ba0e25
+2017-01-12 12:31:43,283 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@f6acd8
+2017-01-12 12:31:43,283 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@cdaff7
+2017-01-12 12:31:43,283 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1dbbe10
+2017-01-12 12:31:43,285 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1dddbab] to prepare test instance [com.example.Article.service.ArticleManagerTest@944ede]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleManagerHibernateImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1)
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280)
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304)
+	... 30 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.hibernate.SessionFactory com.example.Article.service.ArticleManagerHibernateImpl.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 44 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hibernateSessionFactory' defined in class path resource [beans.xml]: Invocation of init method failed; nested exception is org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:848)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:790)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 46 more
+Caused by: org.hibernate.HibernateException: Unable to instantiate default tuplizer [org.hibernate.tuple.entity.PojoEntityTuplizer]
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:108)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructDefaultTuplizer(EntityTuplizerFactory.java:133)
+	at org.hibernate.tuple.entity.EntityEntityModeToTuplizerMapping.<init>(EntityEntityModeToTuplizerMapping.java:80)
+	at org.hibernate.tuple.entity.EntityMetamodel.<init>(EntityMetamodel.java:322)
+	at org.hibernate.persister.entity.AbstractEntityPersister.<init>(AbstractEntityPersister.java:485)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:133)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:84)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:286)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1872)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:860)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:779)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1417)
+	... 56 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.hibernate.tuple.entity.EntityTuplizerFactory.constructTuplizer(EntityTuplizerFactory.java:105)
+	... 69 more
+Caused by: org.hibernate.PropertyNotFoundException: Could not find a setter for property articles in class com.example.Article.domain.UniqueAbility
+	at org.hibernate.property.BasicPropertyAccessor.createSetter(BasicPropertyAccessor.java:262)
+	at org.hibernate.property.BasicPropertyAccessor.getSetter(BasicPropertyAccessor.java:255)
+	at org.hibernate.mapping.Property.getSetter(Property.java:309)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.buildPropertySetter(PojoEntityTuplizer.java:304)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.<init>(AbstractEntityTuplizer.java:156)
+	at org.hibernate.tuple.entity.PojoEntityTuplizer.<init>(PojoEntityTuplizer.java:77)
+	... 74 more
