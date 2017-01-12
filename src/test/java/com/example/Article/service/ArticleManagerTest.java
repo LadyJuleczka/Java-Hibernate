@@ -74,7 +74,15 @@ public class ArticleManagerTest {
 		assertEquals(NEXTMAGIC,addedUniqueAbility.getMagic());
 		assertEquals(NEXTPOWER,addedUniqueAbility.getPower());
 		assertEquals(NEXTLEVEL,addedUniqueAbility.getLevel());
+	}
+	
+	@Test
+	public void FindArticleById(){
+		Article articleF = articleManager.getAllArticle().get(0);
 		
-
+		Article articleR = articleManager.findArticleById(articleF.getId());
+		
+		assertEquals(articleR.getName(),articleF.getName());
+		assertEquals(articleR.getDmg(),articleF.getDmg());
 	}
 }
