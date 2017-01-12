@@ -1,6 +1,8 @@
 package com.example.Article.service;
 
 import static org.junit.Assert.assertEquals;
+import java.util.List;
+
 
 import org.junit.Before;
 import org.junit.Test;
@@ -142,15 +144,38 @@ public class ArticleManagerTest {
 	
 	@Test
 	public void CheckDeleteUniqueAbility(){
-		UniqueAbility uniqueAbility = new UniqueAbility(NEXTMAGIC, NEXTPOWER, NEXTNAMEA, NEXTLEVEL)
+		UniqueAbility uniqueAbility = new UniqueAbility(NEXTMAGIC, NEXTPOWER, NEXTNAMEA, NEXTLEVEL);
 
 		articleManager.addUniqueAbility(uniqueAbility);
 		assertEquals(NEXTNAMEA, articleManager.findUniqueAbilityByName(uniqueAbility.getName()));
 		assertEquals(2,articleManager.getAllUniqueAbility().size());
 		articleManager.deleteUniqueAbility(uniqueAbility);
-		assertEquals(null,articleManager.findUniqueAbilityByName(uniqueAbility.getName()()));
+		assertEquals(null,articleManager.findUniqueAbilityByName(uniqueAbility.getName()));
 		assertEquals(1,articleManager.getAllUniqueAbility().size());
 	}
 	
+	@Test
+	public void CheckGetAllUniqueAbility(){
+		UniqueAbility uniqueAbility = new UniqueAbility(NEXTMAGIC, NEXTPOWER, NEXTNAMEA, NEXTLEVEL);
+
+		articleManager.addUniqueAbility(uniqueAbility);
+		List<UniqueAbility> addedUA = articleManager.getAllUniqueAbility();
+		
+		assertEquals(2,addedUA.size());
+		assertEquals(NAMEA_1,addedUA.get(1).getName());
+		assertEquals(NEXTNAMEA,addedUA.get(1).getName());
+	}
+	
+	@Test
+	public void getAllPlanesCheck(){
+		Article article = new Article(NEXTNAME_1, NEXTDMG_1);
+
+		articleManager.addArticle(article);
+		List<Article> addedArticles = articleManager.getAllArticle()();
+		
+		assertEquals(2,addedArticles.size());
+		assertEquals(NAME_1,addedArticles.get(0).getName());
+		assertEquals(NEXTNAME_1,addedArticles.get(1).getName());
+	}
 
 }
