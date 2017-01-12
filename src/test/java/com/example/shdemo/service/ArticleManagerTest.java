@@ -1,21 +1,29 @@
-//package com.example.shdemo.service;
-//
-//import static org.junit.Assert.*;
-//
-//import java.util.List;
-//
-//import org.junit.Before;
-//import org.junit.Test;
-//
-//import com.example.shdemo.domain.Article;
-//import com.example.shdemo.domain.UniqueAbility;
-//
-//
-//public class ArticleManagerTest {      //SELECT * FROM UNIQUEABILITY
-//									   //DROP SCHEMA PUBLIC CASCADE
-//	
-//	ArticleManager articleManager = new ArticleManager();
-//	
+package com.example.shdemo.service;
+
+import static org.junit.Assert.assertEquals;
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.transaction.TransactionConfiguration;
+import org.springframework.transaction.annotation.Transactional;
+import com.example.shdemo.domain.Article;
+import com.example.shdemo.domain.UniqueAbility;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "classpath:/beans.xml" })
+@TransactionConfiguration(transactionManager = "txManager", defaultRollback = false)
+@Transactional
+public class ArticleManagerTest {      
+	
+
+	@Autowired
+	ArticleManager articleManager;
+	
 //	private final static String DESC_1 = "Obrazenia krytyczne zwiekszone o 20%";
 //	private final static int LEVEL_1 = 10;
 //	private final static double POWER_1 = 420;
@@ -230,4 +238,4 @@
 //		assertEquals(NEXTMAGIC, uniabi2.getMagic());
 //		assertEquals(NEXTLEVEL, uniabi2.getLevel());
 //	}
-//}
+}
