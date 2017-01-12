@@ -171,11 +171,53 @@ public class ArticleManagerTest {
 		Article article = new Article(NEXTNAME_1, NEXTDMG_1);
 
 		articleManager.addArticle(article);
-		List<Article> addedArticles = articleManager.getAllArticle()();
+		List<Article> addedArticles = articleManager.getAllArticle();
 		
 		assertEquals(2,addedArticles.size());
 		assertEquals(NAME_1,addedArticles.get(0).getName());
 		assertEquals(NEXTNAME_1,addedArticles.get(1).getName());
 	}
+	
+	@Test
+	public void CheckGetArticleWithUA(){
+		Article article = new Article(NEXTNAME_1, NEXTDMG_1);
 
+		articleManager.addArticle(article);
+		UniqueAbility uniqueAbility = articleManager.getAllUniqueAbility().get(0);
+		articleManager.giveArticleUA(uniqueAbility.getId(), article.getId());
+		
+		
+		List<Article> addedArticles = articleManager.getHaveUAArticles(uniqueAbility.getName());
+		assertEquals(2,addedArticles.size());
+		assertEquals(true,addedArticles.get(0).isUA());
+		assertEquals(true,addedArticles.get(1).isUA());
+		assertEquals(article.getId(),addedArticles.get(1).getId());
+	}
+	
+	@Test
+	public void CheckGetArticleWithoutUA(){
+		Article article = new Article(NEXTNAME_1, NEXTDMG_1);
+
+		articleManager.addArticle(article);
+		List<Article> planesRetrieved = articleManager.getNotHaveUAArticles();
+		assertEquals(1,planesRetrieved.size());
+		assertEquals(article.getId(),planesRetrieved.get(0).getId());
+		assertEquals(article.isUA(),false);
+	}
+	
+	@Test
+	public void CheckaddUAtoArticle(){
+		Article article = new Article(NEXTNAME_1, NEXTDMG_1);
+
+		articleManager.addArticle(article);
+		UniqueAbility uniqueAbility = new UniqueAbility(NEXTMAGIC, NEXTPOWER, NEXTNAMEA, NEXTLEVEL);
+
+		articleManager.addUniqueAbility(uniqueAbility);
+		articleManager.giveArticleUA(uniqueAbility.getId(), article.getId());
+		List<Article> addedArticle = articleManager.getHaveUAArticles(uniqueAbility.getName());
+
+		assertEquals(true,article.isUA());
+		assertEquals(article.getId(),addedArticle.get(0).getId());
+		assertEquals(1,addedArticle.size());
+	}
 }
