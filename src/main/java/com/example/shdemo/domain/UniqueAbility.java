@@ -16,7 +16,7 @@ import javax.persistence.OneToMany;
 @Entity
 @NamedQueries({
 @NamedQuery(name = "uniqueAbility.all", query = "Select a from UniqueAbility a"),
-@NamedQuery(name = "uniqueAbility.withmagic", query = "Select a from uniqueAbility a where a.magic = true"),
+@NamedQuery(name = "uniqueAbility.bypower", query = "Select a from UniqueAbility a where a.power = :power"),
 })
 
 public class UniqueAbility {

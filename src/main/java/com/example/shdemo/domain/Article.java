@@ -10,22 +10,24 @@ import javax.persistence.NamedQuery;
 @Entity
 @NamedQueries({
 @NamedQuery(name = "article.all", query = "Select a from Article a"),
-@NamedQuery(name = "article.bydmg", query = "Select a from Article a where a.dmg = :dmg"),
+@NamedQuery(name = "article.isRare", query = "Select a from Article a where a.rare = true"),
 })
 
 public class Article {
 	private int id;
 	private String name;
 	private double dmg;
+	private boolean rare;
 	private int uaId;
 	
 	public Article(){
 		
 	}
 	
-	public Article(String name, double dmg){
+	public Article(String name, double dmg, boolean rare){
 		this.name = name;
 		this.dmg = dmg;
+		this.rare = rare;
 	}
 	
 	@Id
@@ -52,6 +54,14 @@ public class Article {
 	
 	public void setDmg(double dmg) {
 		this.dmg = dmg;
+	}
+	
+	public boolean getRare() {
+		return this.rare;
+	}
+	
+	public void setRare(boolean rare) {
+		this.rare = rare;
 	}
 	
 	public double getUaId() {
