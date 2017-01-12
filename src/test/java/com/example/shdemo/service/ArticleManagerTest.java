@@ -1,4 +1,4 @@
-package com.example.jdbcdemo.service;
+package com.example.shdemo.service;
 
 import static org.junit.Assert.*;
 
@@ -7,8 +7,8 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.example.jdbcdemo.domain.Article;
-import com.example.jdbcdemo.domain.UniqueAbility;
+import com.example.shdemo.domain.Article;
+import com.example.shdemo.domain.UniqueAbility;
 
 
 public class ArticleManagerTest {      //SELECT * FROM UNIQUEABILITY

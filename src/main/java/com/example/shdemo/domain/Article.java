@@ -1,4 +1,4 @@
-package com.example.jdbcdemo.domain;
+package com.example.shdemo.domain;
 
 public class Article {
 	private int id;
