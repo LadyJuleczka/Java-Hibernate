@@ -97,4 +97,19 @@ public class ArticleManagerTest {
 		assertEquals(uniqueAbility.getMagic(),uniqueAbilityF.getMagic());
 		assertEquals(uniqueAbility.getPower(),uniqueAbilityF.getPower());
 	}
+	
+	@Test
+	public void CheckUpdateUniqueAbility(){
+		UniqueAbility uniqueAbility = articleManager.getAllUniqueAbility().get(0);
+		assertEquals(NAMEA_1,uniqueAbility.getName());
+		assertEquals(POWER_1,uniqueAbility.getPower());
+		uniqueAbility.setPower(NEXTPOWER);
+		uniqueAbility.setName(NEXTNAMEA);
+		assertEquals(true,articleManager.updateUniqueAbility(uniqueAbility));
+//		UniqueAbility addedUniqueAbility = articleManager.getAllUniqueAbility().get(0);
+		
+		assertEquals(NEXTPOWER,uniqueAbility.getPower());
+		assertEquals(NEXTNAMEA,uniqueAbility.getName());
+	}
+	
 }
