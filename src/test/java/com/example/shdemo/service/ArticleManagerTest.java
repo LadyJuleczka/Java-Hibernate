@@ -13,6 +13,7 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 import com.example.shdemo.domain.Article;
 import com.example.shdemo.domain.UniqueAbility;
+import com.example.shdemo.service.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:/beans.xml" })
@@ -24,32 +25,37 @@ public class ArticleManagerTest {
 	@Autowired
 	ArticleManager articleManager;
 	
-//	private final static String DESC_1 = "Obrazenia krytyczne zwiekszone o 20%";
-//	private final static int LEVEL_1 = 10;
-//	private final static double POWER_1 = 420;
-//	private final static boolean Magic_1 = false;
-//	
-//	private final static String NAME_1 = "Ostrze nieskonosci";
-//	private final static double DMG_1 = 80;
-//	
-//	private final static String NEXTDESC = "Predkosc poruszania zwiekszona o 20";
-//	private final static int NEXTLEVEL = 15;
-//	private final static double NEXTPOWER = 450;
-//	private final static boolean NEXTMAGIC = true;
-//	
-//	@Before 
-//	public void initialize() {
-////		UniqueAbility abi = new UniqueAbility();
-////		abi.setDesc(DESC_1);
-////		abi.setPower(POWER_1);
-////		abi.setMagic(Magic_1);
-////		abi.setLevel(LEVEL_1);
-//		
-//		articleManager.clearUniqueAbility();
-//		articleManager.clearArticle();
-//		
-////		articleManager.addUniqueAbility(abi);
-//	}
+	private final String NAMEA_1 = "Obrazenia krytyczne zwiekszone o 20%";
+	private final int LEVEL_1 = 10;
+	private final double POWER_1 = 420;
+	private final boolean Magic_1 = false;
+	
+	private final String NAME_1 = "Ostrze nieskonosci";
+	private final double DMG_1 = 80;
+	
+	private final String NEXTNAMEA = "Predkosc poruszania zwiekszona o 20";
+	private final int NEXTLEVEL = 15;
+	private final double NEXTPOWER = 450;
+	private final boolean NEXTMAGIC = true;
+	private final String NEXTNAME_1 = "Widmowe Ostrze";
+	private final double NEXTDMG_1 = 120;
+	
+	@Before
+	public void ResetDatabases(){
+	for(UniqueAbility uniqueAbility : articleManager.getAllUniqueAbility()){
+		articleManager.deleteUniqueAbility(uniqueAbility);
+	}
+	for(Article article : articleManager.getAllArticle()){
+		articleManager.deleteArticle(article);;
+	}
+	UniqueAbility umiejetnosc = new UniqueAbility(Magic_1, POWER_1, NAMEA_1, LEVEL_1)
+	Article przedmiot = new Article(NAME_1, DMG_1);
+	articleManager.addArticle(przedmiot);
+	articleManager.addUniqueAbility(umiejetnosc);
+	articleManager.giveArticleUA(umiejetnosc.getId(), przedmiot.getId());
+	}
+	
+	
 //	
 //	@Test
 //	public void checkConnection(){

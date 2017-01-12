@@ -17,7 +17,6 @@ public class Article {
 	private Long id;
 	private String name;
 	private double dmg;
-	private boolean rare;
 	private int uaId;
 	private boolean UA = false;
 	
@@ -25,10 +24,9 @@ public class Article {
 		
 	}
 	
-	public Article(String name, double dmg, boolean rare){
+	public Article(String name, double dmg){
 		this.name = name;
 		this.dmg = dmg;
-		this.rare = rare;
 	}
 	
 	@Id
@@ -57,13 +55,6 @@ public class Article {
 		this.dmg = dmg;
 	}
 	
-	public boolean getRare() {
-		return this.rare;
-	}
-	
-	public void setRare(boolean rare) {
-		this.rare = rare;
-	}
 	
 	public double getUaId() {
 		return this.uaId;

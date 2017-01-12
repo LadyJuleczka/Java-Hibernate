@@ -12,8 +12,6 @@ public interface ArticleManager {
 	void deleteArticle(Article article);
 	Article findArticleById(Long id);
 	List<Article> getAllArticle();
-//	List<Article> getRareArticles(boolean rare);
-//	List<Article> getNotRareArticle();
 	List<Article> getHaveUAArticles(String name);
 	List<Article> getNotaveUAArticles();
 	void giveArticleUA(Long uniqueAbilityId, Long ArticleId);

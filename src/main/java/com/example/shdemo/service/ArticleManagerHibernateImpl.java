@@ -68,18 +68,6 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 		return sessionFactory.getCurrentSession().getNamedQuery("article.all").list();
 	}
 
-//	@Override
-//	public List<Article> getRareArticles(boolean rare) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public List<Article> getNotRareArticle() {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-
 	@Override
 	public void addUniqueAbility(UniqueAbility uniqueAbility) {
 		uniqueAbility.setId(null);
