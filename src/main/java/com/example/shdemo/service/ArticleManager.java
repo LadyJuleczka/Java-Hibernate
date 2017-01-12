@@ -10,7 +10,7 @@ public interface ArticleManager {
 	int addArticle(Article article);
 	boolean updateArticle(Article article);
 	void deleteArticle(Article article);
-	Article findArticleById(int id);
+	Article findArticleById(Long id);
 	List<Article> getAllArticle();
 	List<Article> getRareArticles(boolean rare);
 	List<Article> getNotRareArticle();
@@ -19,7 +19,7 @@ public interface ArticleManager {
 	void addUniqueAbility(UniqueAbility uniqueAbility);
 	boolean updateUniqueAbility(UniqueAbility uniqueAbility);
 	void deleteUniqueAbility(UniqueAbility uniqueAbility);
-	UniqueAbility findUniqueAbilityByLevel(int level);
-	UniqueAbility findUniqueAbilityById(int id);
+	UniqueAbility findUniqueAbilityByPower(int power);
+	UniqueAbility findUniqueAbilityById(Long id);
 	List<UniqueAbility> getAllUniqueAbility();
 }

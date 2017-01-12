@@ -24,7 +24,7 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 
 	@Override
 	public int addArticle(Article article) {
-		// TODO Auto-generated method stub
+		article.setId(null);
 		return 0;
 	}
 
@@ -36,20 +36,34 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 
 	@Override
 	public void deleteArticle(Article article) {
-		// TODO Auto-generated method stub
-		
+		Article planeToDelete = (Article) sessionFactory.getCurrentSession().get(
+				Article.class, article.getId());
+		List<UniqueAbility> airlines = getAllUniqueAbility();
+		if (planeToDelete.isUA()) {
+			for (UniqueAbility ua : airlines) {
+				for (Article a : ua.getArticles()) {
+					if (a.getId() == planeToDelete.getId()) {
+						ua.getArticles().remove(a);
+						sessionFactory.getCurrentSession().update(ua);
+						break;
+					}
+				}
+			}
+		}
+		sessionFactory.getCurrentSession().delete(planeToDelete);
+
 	}
 
 	@Override
-	public Article findArticleById(int id) {
+	public Article findArticleById(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Article> getAllArticle() {
-		// TODO Auto-generated method stub
-		return null;
+		return sessionFactory.getCurrentSession().getNamedQuery("article.all").list();
 	}
 
 	@Override
@@ -87,15 +101,13 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 	}
 
 	@Override
-	public UniqueAbility findUniqueAbilityByLevel(int level) {
-		// TODO Auto-generated method stub
-		return null;
+	public UniqueAbility findUniqueAbilityByPower(int power) {
+		return (UniqueAbility) sessionFactory.getCurrentSession().getNamedQuery("uniqueAbility.byPower").setDouble("power", power).uniqueResult();
 	}
 
 	@Override
-	public UniqueAbility findUniqueAbilityById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public UniqueAbility findUniqueAbilityById(Long id) {
+		return (UniqueAbility) sessionFactory.getCurrentSession().get(UniqueAbility.class, id);
 	}
 	
 	@SuppressWarnings("unchecked")
