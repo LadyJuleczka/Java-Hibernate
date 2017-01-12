@@ -16,7 +16,7 @@ import javax.persistence.OneToMany;
 @Entity
 @NamedQueries({
 @NamedQuery(name = "uniqueAbility.all", query = "Select a from UniqueAbility a"),
-@NamedQuery(name = "uniqueAbility.bypower", query = "Select a from UniqueAbility a where a.power = :power"),
+@NamedQuery(name = "uniqueAbility.byname", query = "Select a from UniqueAbility a where a.name = :name"),
 })
 
 public class UniqueAbility {
@@ -24,7 +24,7 @@ public class UniqueAbility {
 	private Long id;
 	private boolean magic;
 	private double power;
-	private String desc;
+	private String name;
 	private int level;
 	private List<Article> articles = new ArrayList<Article>();
 	
@@ -32,11 +32,11 @@ public class UniqueAbility {
 		
 	}
 	
-	public UniqueAbility(boolean magic, double power, String desc, int level){
+	public UniqueAbility(boolean magic, double power, String name, int level){
 		super();
 		this.magic = magic;
 		this.power = power;
-		this.desc = desc;
+		this.name = name;
 		this.level = level;
 	}
 	
@@ -66,15 +66,15 @@ public class UniqueAbility {
 		this.power = power;
 	}
 	
-	public String getDesc() {
-		return this.desc;
-	}
-	
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
-	
 	@Column(unique = true, nullable = false)
+	public String getName() {
+		return this.name;
+	}
+	
+	public void setName(String desc) {
+		this.name = desc;
+	}
+	
 	public int getLevel() {
 		return this.level;
 	}

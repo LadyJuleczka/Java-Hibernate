@@ -12,14 +12,17 @@ public interface ArticleManager {
 	void deleteArticle(Article article);
 	Article findArticleById(Long id);
 	List<Article> getAllArticle();
-	List<Article> getRareArticles(boolean rare);
-	List<Article> getNotRareArticle();
+//	List<Article> getRareArticles(boolean rare);
+//	List<Article> getNotRareArticle();
+	List<Article> getHaveUAArticles(String name);
+	List<Article> getNotaveUAArticles();
+	void giveArticleUA(Long uniqueAbilityId, Long ArticleId);
 	
 	
 	void addUniqueAbility(UniqueAbility uniqueAbility);
 	boolean updateUniqueAbility(UniqueAbility uniqueAbility);
 	void deleteUniqueAbility(UniqueAbility uniqueAbility);
-	UniqueAbility findUniqueAbilityByPower(int power);
+	UniqueAbility findUniqueAbilityByName(String name);
 	UniqueAbility findUniqueAbilityById(Long id);
 	List<UniqueAbility> getAllUniqueAbility();
 }
