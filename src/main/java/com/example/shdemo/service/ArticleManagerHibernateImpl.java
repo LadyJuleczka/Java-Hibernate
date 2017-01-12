@@ -66,8 +66,8 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 
 	@Override
 	public void addUniqueAbility(UniqueAbility uniqueAbility) {
-		// TODO Auto-generated method stub
-		
+		uniqueAbility.setId(null);
+		sessionFactory.getCurrentSession().persist(uniqueAbility);
 	}
 
 	@Override
@@ -78,8 +78,12 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 
 	@Override
 	public void deleteUniqueAbility(UniqueAbility uniqueAbility) {
-		// TODO Auto-generated method stub
-		
+		uniqueAbility = (UniqueAbility) sessionFactory.getCurrentSession().get(UniqueAbility.class, uniqueAbility.getId());
+		for(Article article : uniqueAbility.getArticles()){
+			article.setUA(false);
+		sessionFactory.getCurrentSession().update(article);
+		}
+		sessionFactory.getCurrentSession().delete(uniqueAbility);
 	}
 
 	@Override
@@ -93,11 +97,11 @@ public class ArticleManagerHibernateImpl implements ArticleManager {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<UniqueAbility> getAllUniqueAbility() {
-		// TODO Auto-generated method stub
-		return null;
+		return sessionFactory.getCurrentSession().getNamedQuery("uniqueAbility.all").list();
 	}
 
 //	public void setSessionFactory(SessionFactory sessionFactory) {

@@ -21,7 +21,7 @@ import javax.persistence.OneToMany;
 
 public class UniqueAbility {
 
-	private int id;
+	private Long id;
 	private boolean magic;
 	private double power;
 	private String desc;
@@ -42,11 +42,11 @@ public class UniqueAbility {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public int getId() {
+	public Long getId() {
 		return this.id;
 	}
 	
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id=id;
 	}
 	
@@ -88,7 +88,7 @@ public class UniqueAbility {
 	}
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	public List<Article> getArticle() {
+	public List<Article> getArticles() {
 		return articles;
 	}
 }

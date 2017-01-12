@@ -10,15 +10,16 @@ import javax.persistence.NamedQuery;
 @Entity
 @NamedQueries({
 @NamedQuery(name = "article.all", query = "Select a from Article a"),
-@NamedQuery(name = "article.isRare", query = "Select a from Article a where a.rare = true"),
+@NamedQuery(name = "article.haveUA", query = "Select a from Article a where a.UA = true"),
 })
 
 public class Article {
-	private int id;
+	private Long id;
 	private String name;
 	private double dmg;
 	private boolean rare;
 	private int uaId;
+	private boolean UA = false;
 	
 	public Article(){
 		
@@ -32,11 +33,11 @@ public class Article {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public int getId() {
+	public Long getId() {
 		return this.id;
 	}
 	
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id=id;
 	}
 	
@@ -70,5 +71,13 @@ public class Article {
 	
 	public void setUaId(int ua) {
 		this.uaId = ua;
+	}
+
+	public boolean isUA() {
+		return UA;
+	}
+
+	public void setUA(boolean uA) {
+		UA = uA;
 	}
 }
