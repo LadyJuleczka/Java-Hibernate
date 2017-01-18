@@ -7614,3 +7614,1297 @@ Caused by: org.hibernate.HibernateException: Errors in named queries: person.byP
 2017-01-18 11:16:04,846 INFO  [TableMetadata]  - foreign keys: [fka7a4369091124935, fka7a436904851c5ce]
 2017-01-18 11:16:04,846 INFO  [TableMetadata]  - indexes: [sys_idx_10046, sys_idx_sys_ct_10043_10045, sys_idx_10048]
 2017-01-18 11:16:05,179 INFO  [SessionFactoryImpl]  - closing
+2017-01-18 14:13:32,374 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-18 14:13:32,389 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-18 14:13:32,392 INFO  [Environment]  - hibernate.properties not found
+2017-01-18 14:13:32,398 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-18 14:13:32,403 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-18 14:13:32,554 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Article
+2017-01-18 14:13:32,577 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-18 14:13:32,579 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select c from Article c where c.haveUA = false
+2017-01-18 14:13:32,601 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Article on table Article
+2017-01-18 14:13:32,658 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.UniqueAbility
+2017-01-18 14:13:32,658 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select p from UniqueAbility p
+2017-01-18 14:13:32,658 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select p from UniqueAbility p where p.name = :name
+2017-01-18 14:13:32,659 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.UniqueAbility on table UniqueAbility
+2017-01-18 14:13:32,707 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-18 14:13:32,712 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-18 14:13:32,718 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-18 14:13:33,094 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:13:33,125 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:13:33,125 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:13:33,127 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-18 14:13:33,128 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-18 14:13:33,129 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-18 14:13:33,129 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-18 14:13:33,129 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-18 14:13:33,129 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-18 14:13:33,130 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-18 14:13:33,130 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-18 14:13:33,131 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-18 14:13:33,131 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-18 14:13:33,132 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-18 14:13:33,132 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-18 14:13:33,132 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-18 14:13:33,132 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-18 14:13:33,136 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-18 14:13:33,136 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-18 14:13:33,136 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-18 14:13:33,136 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-18 14:13:33,137 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-18 14:13:33,137 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-18 14:13:33,138 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-18 14:13:33,138 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-18 14:13:33,142 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-18 14:13:33,143 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-18 14:13:33,143 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-18 14:13:33,144 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-18 14:13:33,144 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-18 14:13:33,144 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-18 14:13:33,163 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-18 14:13:33,169 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@766653e6
+2017-01-18 14:13:33,169 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@4e07b95f
+2017-01-18 14:13:33,169 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@28b46423
+2017-01-18 14:13:33,169 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7fc4780b
+2017-01-18 14:13:33,170 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:13:33,170 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:13:33,170 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@48c76607
+2017-01-18 14:13:33,170 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:13:33,170 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:13:33,400 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-01-18 14:13:33,671 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:13:33,686 INFO  [DatabaseMetadata]  - table not found: Article
+2017-01-18 14:13:33,691 INFO  [DatabaseMetadata]  - table not found: UniqueAbility
+2017-01-18 14:13:33,702 INFO  [DatabaseMetadata]  - table not found: UniqueAbility_Article
+2017-01-18 14:13:33,706 INFO  [DatabaseMetadata]  - table not found: Article
+2017-01-18 14:13:33,710 INFO  [DatabaseMetadata]  - table not found: UniqueAbility
+2017-01-18 14:13:33,713 INFO  [DatabaseMetadata]  - table not found: UniqueAbility_Article
+2017-01-18 14:13:34,358 INFO  [SessionFactoryImpl]  - closing
+2017-01-18 14:13:55,659 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-18 14:13:55,668 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-18 14:13:55,671 INFO  [Environment]  - hibernate.properties not found
+2017-01-18 14:13:55,676 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-18 14:13:55,682 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-18 14:13:55,805 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Article
+2017-01-18 14:13:55,829 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-18 14:13:55,830 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select c from Article c where c.haveUA = false
+2017-01-18 14:13:55,852 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Article on table Article
+2017-01-18 14:13:55,907 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.UniqueAbility
+2017-01-18 14:13:55,908 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select p from UniqueAbility p
+2017-01-18 14:13:55,909 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select p from UniqueAbility p where p.name = :name
+2017-01-18 14:13:55,909 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.UniqueAbility on table UniqueAbility
+2017-01-18 14:13:55,964 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-18 14:13:55,971 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-18 14:13:55,977 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-18 14:13:56,318 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:13:56,347 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:13:56,348 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:13:56,349 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-18 14:13:56,351 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-18 14:13:56,351 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-18 14:13:56,351 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-18 14:13:56,351 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-18 14:13:56,351 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-18 14:13:56,352 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-18 14:13:56,352 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-18 14:13:56,352 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-18 14:13:56,353 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-18 14:13:56,353 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-18 14:13:56,353 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-18 14:13:56,354 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-18 14:13:56,354 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-18 14:13:56,357 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-18 14:13:56,357 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-18 14:13:56,357 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-18 14:13:56,357 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-18 14:13:56,357 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-18 14:13:56,357 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-18 14:13:56,359 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-18 14:13:56,359 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-18 14:13:56,363 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-18 14:13:56,363 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-18 14:13:56,364 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-18 14:13:56,364 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-18 14:13:56,364 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-18 14:13:56,364 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-18 14:13:56,383 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-18 14:13:56,390 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@766653e6
+2017-01-18 14:13:56,390 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@4e07b95f
+2017-01-18 14:13:56,390 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@28b46423
+2017-01-18 14:13:56,390 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7fc4780b
+2017-01-18 14:13:56,390 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:13:56,390 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:13:56,390 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@48c76607
+2017-01-18 14:13:56,390 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:13:56,390 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:13:56,599 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-01-18 14:13:56,851 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:13:56,895 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.ARTICLE
+2017-01-18 14:13:56,896 INFO  [TableMetadata]  - columns: [haveua, name, id, dmg]
+2017-01-18 14:13:56,896 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:13:56,896 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10035_10036]
+2017-01-18 14:13:56,919 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY
+2017-01-18 14:13:56,919 INFO  [TableMetadata]  - columns: [level, name, id]
+2017-01-18 14:13:56,919 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:13:56,919 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10039_10041, sys_idx_sys_pk_10038_10040]
+2017-01-18 14:13:56,946 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY_ARTICLE
+2017-01-18 14:13:56,946 INFO  [TableMetadata]  - columns: [uniqueability_id, articles_id]
+2017-01-18 14:13:56,946 INFO  [TableMetadata]  - foreign keys: [fka7a4369091124935, fka7a436904851c5ce]
+2017-01-18 14:13:56,946 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10044_10046, sys_idx_10047, sys_idx_10049]
+2017-01-18 14:13:57,616 INFO  [SessionFactoryImpl]  - closing
+2017-01-18 14:19:30,279 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-18 14:19:30,289 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-18 14:19:30,292 INFO  [Environment]  - hibernate.properties not found
+2017-01-18 14:19:30,297 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-18 14:19:30,302 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-18 14:19:30,428 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Article
+2017-01-18 14:19:30,450 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-18 14:19:30,452 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select c from Article c where c.haveUA = false
+2017-01-18 14:19:30,474 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Article on table Article
+2017-01-18 14:19:30,536 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.UniqueAbility
+2017-01-18 14:19:30,536 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select p from UniqueAbility p
+2017-01-18 14:19:30,537 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select p from UniqueAbility p where p.name = :name
+2017-01-18 14:19:30,537 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.UniqueAbility on table UniqueAbility
+2017-01-18 14:19:30,594 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-18 14:19:30,600 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-18 14:19:30,606 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-18 14:19:30,948 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:19:30,978 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:19:30,979 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:19:30,981 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-18 14:19:30,982 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-18 14:19:30,983 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-18 14:19:30,983 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-18 14:19:30,983 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-18 14:19:30,983 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-18 14:19:30,984 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-18 14:19:30,984 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-18 14:19:30,984 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-18 14:19:30,985 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-18 14:19:30,985 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-18 14:19:30,985 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-18 14:19:30,985 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-18 14:19:30,986 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-18 14:19:30,989 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-18 14:19:30,989 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-18 14:19:30,989 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-18 14:19:30,989 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-18 14:19:30,989 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-18 14:19:30,989 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-18 14:19:30,990 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-18 14:19:30,991 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-18 14:19:30,994 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-18 14:19:30,995 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-18 14:19:30,995 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-18 14:19:30,995 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-18 14:19:30,995 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-18 14:19:30,995 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-18 14:19:31,014 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-18 14:19:31,019 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@766653e6
+2017-01-18 14:19:31,020 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@4e07b95f
+2017-01-18 14:19:31,020 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@28b46423
+2017-01-18 14:19:31,020 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7fc4780b
+2017-01-18 14:19:31,020 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:19:31,020 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:19:31,020 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@48c76607
+2017-01-18 14:19:31,020 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:19:31,020 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:19:31,226 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-01-18 14:19:31,483 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:19:31,543 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.ARTICLE
+2017-01-18 14:19:31,543 INFO  [TableMetadata]  - columns: [haveua, name, id, dmg]
+2017-01-18 14:19:31,543 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:19:31,543 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10035_10036]
+2017-01-18 14:19:31,565 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY
+2017-01-18 14:19:31,567 INFO  [TableMetadata]  - columns: [level, name, id]
+2017-01-18 14:19:31,567 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:19:31,567 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10039_10041, sys_idx_sys_pk_10038_10040]
+2017-01-18 14:19:31,594 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY_ARTICLE
+2017-01-18 14:19:31,595 INFO  [TableMetadata]  - columns: [uniqueability_id, articles_id]
+2017-01-18 14:19:31,595 INFO  [TableMetadata]  - foreign keys: [fka7a4369091124935, fka7a436904851c5ce]
+2017-01-18 14:19:31,595 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10044_10046, sys_idx_10047, sys_idx_10049]
+2017-01-18 14:19:32,219 INFO  [SessionFactoryImpl]  - closing
+2017-01-18 14:28:59,529 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-18 14:28:59,538 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-18 14:28:59,541 INFO  [Environment]  - hibernate.properties not found
+2017-01-18 14:28:59,547 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-18 14:28:59,552 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-18 14:28:59,674 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Article
+2017-01-18 14:28:59,700 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-18 14:28:59,700 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select c from Article c where c.haveUA = false
+2017-01-18 14:28:59,724 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Article on table Article
+2017-01-18 14:28:59,781 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.UniqueAbility
+2017-01-18 14:28:59,781 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select p from UniqueAbility p
+2017-01-18 14:28:59,782 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select p from UniqueAbility p where p.name = :name
+2017-01-18 14:28:59,782 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.UniqueAbility on table UniqueAbility
+2017-01-18 14:28:59,832 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-18 14:28:59,837 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-18 14:28:59,846 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-18 14:29:00,188 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:29:00,215 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:29:00,216 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:29:00,220 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-18 14:29:00,221 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-18 14:29:00,222 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-18 14:29:00,222 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-18 14:29:00,222 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-18 14:29:00,223 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-18 14:29:00,223 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-18 14:29:00,223 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-18 14:29:00,224 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-18 14:29:00,224 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-18 14:29:00,224 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-18 14:29:00,224 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-18 14:29:00,225 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-18 14:29:00,225 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-18 14:29:00,227 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-18 14:29:00,227 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-18 14:29:00,228 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-18 14:29:00,228 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-18 14:29:00,228 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-18 14:29:00,228 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-18 14:29:00,229 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-18 14:29:00,229 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-18 14:29:00,232 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-18 14:29:00,233 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-18 14:29:00,233 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-18 14:29:00,234 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-18 14:29:00,234 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-18 14:29:00,234 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-18 14:29:00,254 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-18 14:29:00,260 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@766653e6
+2017-01-18 14:29:00,260 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@4e07b95f
+2017-01-18 14:29:00,260 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@28b46423
+2017-01-18 14:29:00,260 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7fc4780b
+2017-01-18 14:29:00,260 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:29:00,261 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:29:00,261 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@48c76607
+2017-01-18 14:29:00,261 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:29:00,261 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:29:00,467 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-01-18 14:29:00,727 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:29:00,760 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.ARTICLE
+2017-01-18 14:29:00,760 INFO  [TableMetadata]  - columns: [haveua, name, id, dmg]
+2017-01-18 14:29:00,760 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:29:00,760 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10035_10036]
+2017-01-18 14:29:00,775 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY
+2017-01-18 14:29:00,775 INFO  [TableMetadata]  - columns: [level, name, id]
+2017-01-18 14:29:00,775 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:29:00,775 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10039_10041, sys_idx_sys_pk_10038_10040]
+2017-01-18 14:29:00,790 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY_ARTICLE
+2017-01-18 14:29:00,790 INFO  [TableMetadata]  - columns: [uniqueability_id, articles_id]
+2017-01-18 14:29:00,790 INFO  [TableMetadata]  - foreign keys: [fka7a4369091124935, fka7a436904851c5ce]
+2017-01-18 14:29:00,791 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10044_10046, sys_idx_10047, sys_idx_10049]
+2017-01-18 14:29:01,407 INFO  [SessionFactoryImpl]  - closing
+2017-01-18 14:30:37,498 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-18 14:30:37,508 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-18 14:30:37,511 INFO  [Environment]  - hibernate.properties not found
+2017-01-18 14:30:37,517 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-18 14:30:37,522 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-18 14:30:37,645 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Article
+2017-01-18 14:30:37,667 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-18 14:30:37,668 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select c from Article c where c.haveUA = false
+2017-01-18 14:30:37,689 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Article on table Article
+2017-01-18 14:30:37,745 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.UniqueAbility
+2017-01-18 14:30:37,746 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select p from UniqueAbility p
+2017-01-18 14:30:37,746 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select p from UniqueAbility p where p.name = :name
+2017-01-18 14:30:37,747 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.UniqueAbility on table UniqueAbility
+2017-01-18 14:30:37,797 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-18 14:30:37,802 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-18 14:30:37,808 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-18 14:30:38,148 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:30:38,182 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:30:38,183 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:30:38,185 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-18 14:30:38,187 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-18 14:30:38,187 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-18 14:30:38,188 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-18 14:30:38,188 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-18 14:30:38,188 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-18 14:30:38,190 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-18 14:30:38,190 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-18 14:30:38,190 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-18 14:30:38,192 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-18 14:30:38,192 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-18 14:30:38,192 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-18 14:30:38,192 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-18 14:30:38,192 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-18 14:30:38,196 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-18 14:30:38,196 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-18 14:30:38,196 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-18 14:30:38,196 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-18 14:30:38,196 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-18 14:30:38,197 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-18 14:30:38,198 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-18 14:30:38,198 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-18 14:30:38,201 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-18 14:30:38,202 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-18 14:30:38,202 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-18 14:30:38,203 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-18 14:30:38,203 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-18 14:30:38,203 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-18 14:30:38,221 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-18 14:30:38,227 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@766653e6
+2017-01-18 14:30:38,227 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@4e07b95f
+2017-01-18 14:30:38,227 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@28b46423
+2017-01-18 14:30:38,227 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7fc4780b
+2017-01-18 14:30:38,227 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:30:38,228 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:30:38,228 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@48c76607
+2017-01-18 14:30:38,228 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:30:38,228 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:30:38,434 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-01-18 14:30:38,690 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:30:38,721 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.ARTICLE
+2017-01-18 14:30:38,722 INFO  [TableMetadata]  - columns: [haveua, name, id, dmg]
+2017-01-18 14:30:38,723 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:30:38,723 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10035_10036]
+2017-01-18 14:30:38,741 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY
+2017-01-18 14:30:38,742 INFO  [TableMetadata]  - columns: [level, name, id]
+2017-01-18 14:30:38,742 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:30:38,742 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10039_10041, sys_idx_sys_pk_10038_10040]
+2017-01-18 14:30:38,756 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY_ARTICLE
+2017-01-18 14:30:38,757 INFO  [TableMetadata]  - columns: [uniqueability_id, articles_id]
+2017-01-18 14:30:38,757 INFO  [TableMetadata]  - foreign keys: [fka7a4369091124935, fka7a436904851c5ce]
+2017-01-18 14:30:38,757 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10044_10046, sys_idx_10047, sys_idx_10049]
+2017-01-18 14:30:39,415 INFO  [SessionFactoryImpl]  - closing
+2017-01-18 14:30:53,523 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-18 14:30:53,532 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-18 14:30:53,535 INFO  [Environment]  - hibernate.properties not found
+2017-01-18 14:30:53,541 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-18 14:30:53,546 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-18 14:30:53,670 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Article
+2017-01-18 14:30:53,690 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-18 14:30:53,692 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select c from Article c where c.haveUA = false
+2017-01-18 14:30:53,714 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Article on table Article
+2017-01-18 14:30:53,772 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.UniqueAbility
+2017-01-18 14:30:53,772 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select p from UniqueAbility p
+2017-01-18 14:30:53,773 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select p from UniqueAbility p where p.name = :name
+2017-01-18 14:30:53,773 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.UniqueAbility on table UniqueAbility
+2017-01-18 14:30:53,823 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-18 14:30:53,828 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-18 14:30:53,834 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-18 14:30:54,178 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:30:54,206 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:30:54,206 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:30:54,211 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-18 14:30:54,212 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-18 14:30:54,213 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-18 14:30:54,213 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-18 14:30:54,214 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-18 14:30:54,214 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-18 14:30:54,216 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-18 14:30:54,216 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-18 14:30:54,216 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-18 14:30:54,218 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-18 14:30:54,218 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-18 14:30:54,218 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-18 14:30:54,219 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-18 14:30:54,219 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-18 14:30:54,222 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-18 14:30:54,223 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-18 14:30:54,223 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-18 14:30:54,223 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-18 14:30:54,223 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-18 14:30:54,223 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-18 14:30:54,224 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-18 14:30:54,224 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-18 14:30:54,227 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-18 14:30:54,228 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-18 14:30:54,228 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-18 14:30:54,229 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-18 14:30:54,229 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-18 14:30:54,229 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-18 14:30:54,249 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-18 14:30:54,256 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@766653e6
+2017-01-18 14:30:54,256 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@4e07b95f
+2017-01-18 14:30:54,256 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@28b46423
+2017-01-18 14:30:54,257 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7fc4780b
+2017-01-18 14:30:54,257 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:30:54,257 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:30:54,257 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@48c76607
+2017-01-18 14:30:54,257 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:30:54,257 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:30:54,463 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-01-18 14:30:54,722 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:30:54,751 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.ARTICLE
+2017-01-18 14:30:54,751 INFO  [TableMetadata]  - columns: [haveua, name, id, dmg]
+2017-01-18 14:30:54,751 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:30:54,751 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10035_10036]
+2017-01-18 14:30:54,765 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY
+2017-01-18 14:30:54,765 INFO  [TableMetadata]  - columns: [level, name, id]
+2017-01-18 14:30:54,765 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:30:54,765 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10039_10041, sys_idx_sys_pk_10038_10040]
+2017-01-18 14:30:54,802 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY_ARTICLE
+2017-01-18 14:30:54,803 INFO  [TableMetadata]  - columns: [uniqueability_id, articles_id]
+2017-01-18 14:30:54,803 INFO  [TableMetadata]  - foreign keys: [fka7a4369091124935, fka7a436904851c5ce]
+2017-01-18 14:30:54,803 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10044_10046, sys_idx_10047, sys_idx_10049]
+2017-01-18 14:30:55,543 INFO  [SessionFactoryImpl]  - closing
+2017-01-18 14:31:03,700 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-18 14:31:03,710 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-18 14:31:03,713 INFO  [Environment]  - hibernate.properties not found
+2017-01-18 14:31:03,720 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-18 14:31:03,725 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-18 14:31:03,855 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.Article
+2017-01-18 14:31:03,883 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-18 14:31:03,884 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select c from Article c where c.haveUA = false
+2017-01-18 14:31:03,910 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.Article on table Article
+2017-01-18 14:31:03,975 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.shdemo.domain.UniqueAbility
+2017-01-18 14:31:03,975 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select p from UniqueAbility p
+2017-01-18 14:31:03,976 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select p from UniqueAbility p where p.name = :name
+2017-01-18 14:31:03,976 INFO  [EntityBinder]  - Bind entity com.example.shdemo.domain.UniqueAbility on table UniqueAbility
+2017-01-18 14:31:04,029 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-18 14:31:04,034 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-18 14:31:04,040 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-18 14:31:04,377 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:31:04,406 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:31:04,407 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:31:04,409 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-18 14:31:04,411 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-18 14:31:04,411 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-18 14:31:04,412 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-18 14:31:04,412 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-18 14:31:04,412 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-18 14:31:04,413 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-18 14:31:04,414 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-18 14:31:04,414 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-18 14:31:04,415 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-18 14:31:04,416 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-18 14:31:04,416 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-18 14:31:04,416 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-18 14:31:04,417 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-18 14:31:04,419 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-18 14:31:04,420 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-18 14:31:04,420 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-18 14:31:04,421 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-18 14:31:04,421 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-18 14:31:04,421 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-18 14:31:04,422 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-18 14:31:04,422 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-18 14:31:04,426 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-18 14:31:04,427 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-18 14:31:04,427 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-18 14:31:04,427 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-18 14:31:04,427 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-18 14:31:04,427 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-18 14:31:04,447 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-18 14:31:04,453 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@766653e6
+2017-01-18 14:31:04,454 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@4e07b95f
+2017-01-18 14:31:04,454 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@28b46423
+2017-01-18 14:31:04,454 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7fc4780b
+2017-01-18 14:31:04,454 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:31:04,454 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:31:04,454 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@48c76607
+2017-01-18 14:31:04,454 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:31:04,454 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:31:04,660 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-01-18 14:31:04,916 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:31:04,946 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.ARTICLE
+2017-01-18 14:31:04,946 INFO  [TableMetadata]  - columns: [haveua, name, id, dmg]
+2017-01-18 14:31:04,946 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:31:04,946 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10035_10036]
+2017-01-18 14:31:04,961 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY
+2017-01-18 14:31:04,961 INFO  [TableMetadata]  - columns: [level, name, id]
+2017-01-18 14:31:04,962 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:31:04,962 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10039_10041, sys_idx_sys_pk_10038_10040]
+2017-01-18 14:31:04,978 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY_ARTICLE
+2017-01-18 14:31:04,978 INFO  [TableMetadata]  - columns: [uniqueability_id, articles_id]
+2017-01-18 14:31:04,978 INFO  [TableMetadata]  - foreign keys: [fka7a4369091124935, fka7a436904851c5ce]
+2017-01-18 14:31:04,978 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10044_10046, sys_idx_10047, sys_idx_10049]
+2017-01-18 14:31:05,703 INFO  [SessionFactoryImpl]  - closing
+2017-01-18 14:36:48,030 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-18 14:36:48,041 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-18 14:36:48,045 INFO  [Environment]  - hibernate.properties not found
+2017-01-18 14:36:48,052 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-18 14:36:48,057 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-18 14:36:48,173 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-18 14:36:48,178 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-18 14:36:48,181 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-18 14:36:48,565 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:36:48,598 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:36:48,598 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:36:48,600 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-18 14:36:48,601 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-18 14:36:48,601 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-18 14:36:48,601 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-18 14:36:48,602 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-18 14:36:48,602 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-18 14:36:48,603 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-18 14:36:48,603 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-18 14:36:48,603 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-18 14:36:48,604 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-18 14:36:48,604 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-18 14:36:48,604 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-18 14:36:48,604 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-18 14:36:48,604 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-18 14:36:48,607 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-18 14:36:48,607 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-18 14:36:48,607 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-18 14:36:48,607 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-18 14:36:48,607 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-18 14:36:48,607 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-18 14:36:48,609 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-18 14:36:48,609 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-18 14:36:48,613 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-18 14:36:48,614 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-18 14:36:48,614 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-18 14:36:48,614 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-18 14:36:48,614 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-18 14:36:48,614 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-18 14:36:48,639 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-18 14:36:48,647 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@15043a2f
+2017-01-18 14:36:48,647 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@4a83a74a
+2017-01-18 14:36:48,647 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@1349883
+2017-01-18 14:36:48,647 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@4b29d1d2
+2017-01-18 14:36:48,647 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@4b29d1d2
+2017-01-18 14:36:48,648 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@7f485fda
+2017-01-18 14:36:48,648 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@7f485fda
+2017-01-18 14:36:48,648 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@28261e8e
+2017-01-18 14:36:48,648 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@d737b89
+2017-01-18 14:36:48,681 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-01-18 14:36:48,787 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:36:48,850 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@41488b16]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,868 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@34129c78]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,871 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@4c2bb6e0]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,876 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@638ef7ed]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,879 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@47c81abf]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,887 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@18ece7f4]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,891 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@4c5ae43b]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,895 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@2e570ded]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,899 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@1169afe1]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,902 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@2ca923bb]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,906 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@1787f2a0]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,909 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@7905a0b8]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,912 ERROR [TestContextManager]  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@68878f6d] to prepare test instance [com.example.ArticleShop.service.ArticleManagerTest@478db956]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ArticleShop.service.ArticleManagerTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1074)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:374)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:321)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:211)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:48)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.ArticleShop.service.ArticleManager com.example.ArticleShop.service.ArticleManagerTest.articleManager; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No matching bean of type [com.example.ArticleShop.service.ArticleManager] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:924)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:793)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:707)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2017-01-18 14:36:48,937 INFO  [SessionFactoryImpl]  - closing
+2017-01-18 14:37:49,250 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-18 14:37:49,260 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-18 14:37:49,263 INFO  [Environment]  - hibernate.properties not found
+2017-01-18 14:37:49,269 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-18 14:37:49,273 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-18 14:37:49,397 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.ArticleShop.domain.Article
+2017-01-18 14:37:49,423 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-18 14:37:49,424 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select c from Article c where c.haveUA = false
+2017-01-18 14:37:49,448 INFO  [EntityBinder]  - Bind entity com.example.ArticleShop.domain.Article on table Article
+2017-01-18 14:37:49,510 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.ArticleShop.domain.UniqueAbility
+2017-01-18 14:37:49,511 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select p from UniqueAbility p
+2017-01-18 14:37:49,512 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select p from UniqueAbility p where p.name = :name
+2017-01-18 14:37:49,512 INFO  [EntityBinder]  - Bind entity com.example.ArticleShop.domain.UniqueAbility on table UniqueAbility
+2017-01-18 14:37:49,566 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-18 14:37:49,571 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-18 14:37:49,577 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-18 14:37:49,916 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:37:49,943 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:37:49,943 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:37:49,946 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-18 14:37:49,949 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-18 14:37:49,950 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-18 14:37:49,950 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-18 14:37:49,950 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-18 14:37:49,950 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-18 14:37:49,951 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-18 14:37:49,951 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-18 14:37:49,951 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-18 14:37:49,952 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-18 14:37:49,952 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-18 14:37:49,952 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-18 14:37:49,952 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-18 14:37:49,952 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-18 14:37:49,955 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-18 14:37:49,955 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-18 14:37:49,955 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-18 14:37:49,956 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-18 14:37:49,956 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-18 14:37:49,956 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-18 14:37:49,957 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-18 14:37:49,957 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-18 14:37:49,961 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-18 14:37:49,962 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-18 14:37:49,962 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-18 14:37:49,962 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-18 14:37:49,962 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-18 14:37:49,962 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-18 14:37:49,982 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-18 14:37:49,988 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@766653e6
+2017-01-18 14:37:49,989 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@4e07b95f
+2017-01-18 14:37:49,989 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@28b46423
+2017-01-18 14:37:49,989 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7fc4780b
+2017-01-18 14:37:49,989 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:37:49,989 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:37:49,989 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@48c76607
+2017-01-18 14:37:49,989 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:37:49,989 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:37:50,198 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-01-18 14:37:50,457 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:37:50,484 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.ARTICLE
+2017-01-18 14:37:50,485 INFO  [TableMetadata]  - columns: [haveua, name, id, dmg]
+2017-01-18 14:37:50,485 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:37:50,485 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10035_10036]
+2017-01-18 14:37:50,499 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY
+2017-01-18 14:37:50,499 INFO  [TableMetadata]  - columns: [level, name, id]
+2017-01-18 14:37:50,500 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:37:50,500 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10039_10041, sys_idx_sys_pk_10038_10040]
+2017-01-18 14:37:50,514 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY_ARTICLE
+2017-01-18 14:37:50,514 INFO  [TableMetadata]  - columns: [uniqueability_id, articles_id]
+2017-01-18 14:37:50,514 INFO  [TableMetadata]  - foreign keys: [fka7a4369091124935, fka7a436904851c5ce]
+2017-01-18 14:37:50,514 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10044_10046, sys_idx_10047, sys_idx_10049]
+2017-01-18 14:37:51,255 INFO  [SessionFactoryImpl]  - closing
+2017-01-18 14:39:40,452 INFO  [Version]  - Hibernate Commons Annotations 3.2.0.Final
+2017-01-18 14:39:40,462 INFO  [Environment]  - Hibernate 3.6.6.Final
+2017-01-18 14:39:40,465 INFO  [Environment]  - hibernate.properties not found
+2017-01-18 14:39:40,470 INFO  [Environment]  - Bytecode provider name : javassist
+2017-01-18 14:39:40,475 INFO  [Environment]  - using JDK 1.4 java.sql.Timestamp handling
+2017-01-18 14:39:40,599 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.ArticleShop.domain.Article
+2017-01-18 14:39:40,619 INFO  [QueryBinder]  - Binding Named query: article.all => Select a from Article a
+2017-01-18 14:39:40,621 INFO  [QueryBinder]  - Binding Named query: article.notHaveUA => Select c from Article c where c.haveUA = false
+2017-01-18 14:39:40,643 INFO  [EntityBinder]  - Bind entity com.example.ArticleShop.domain.Article on table Article
+2017-01-18 14:39:40,701 INFO  [AnnotationBinder]  - Binding entity from annotated class: com.example.ArticleShop.domain.UniqueAbility
+2017-01-18 14:39:40,702 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.all => Select p from UniqueAbility p
+2017-01-18 14:39:40,703 INFO  [QueryBinder]  - Binding Named query: uniqueAbility.byname => Select p from UniqueAbility p where p.name = :name
+2017-01-18 14:39:40,703 INFO  [EntityBinder]  - Bind entity com.example.ArticleShop.domain.UniqueAbility on table UniqueAbility
+2017-01-18 14:39:40,752 INFO  [Configuration]  - Hibernate Validator not found: ignoring
+2017-01-18 14:39:40,757 INFO  [HibernateSearchEventListenerRegister]  - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2017-01-18 14:39:40,763 INFO  [ConnectionProviderFactory]  - Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+2017-01-18 14:39:41,106 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:39:41,133 INFO  [SettingsFactory]  - Database ->
+       name : HSQL Database Engine
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:39:41,134 INFO  [SettingsFactory]  - Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.2.4
+      major : 2
+      minor : 2
+2017-01-18 14:39:41,135 INFO  [TransactionFactoryFactory]  - Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2017-01-18 14:39:41,137 INFO  [TransactionManagerLookupFactory]  - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2017-01-18 14:39:41,137 INFO  [SettingsFactory]  - Automatic flush during beforeCompletion(): disabled
+2017-01-18 14:39:41,137 INFO  [SettingsFactory]  - Automatic session close at end of transaction: disabled
+2017-01-18 14:39:41,138 INFO  [SettingsFactory]  - JDBC batch size: 15
+2017-01-18 14:39:41,138 INFO  [SettingsFactory]  - JDBC batch updates for versioned data: disabled
+2017-01-18 14:39:41,138 INFO  [SettingsFactory]  - Scrollable result sets: enabled
+2017-01-18 14:39:41,139 INFO  [SettingsFactory]  - JDBC3 getGeneratedKeys(): enabled
+2017-01-18 14:39:41,139 INFO  [SettingsFactory]  - Connection release mode: auto
+2017-01-18 14:39:41,139 INFO  [SettingsFactory]  - Default batch fetch size: 1
+2017-01-18 14:39:41,140 INFO  [SettingsFactory]  - Generate SQL with comments: disabled
+2017-01-18 14:39:41,140 INFO  [SettingsFactory]  - Order SQL updates by primary key: disabled
+2017-01-18 14:39:41,140 INFO  [SettingsFactory]  - Order SQL inserts for batching: disabled
+2017-01-18 14:39:41,140 INFO  [SettingsFactory]  - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2017-01-18 14:39:41,143 INFO  [ASTQueryTranslatorFactory]  - Using ASTQueryTranslatorFactory
+2017-01-18 14:39:41,143 INFO  [SettingsFactory]  - Query language substitutions: {}
+2017-01-18 14:39:41,143 INFO  [SettingsFactory]  - JPA-QL strict compliance: disabled
+2017-01-18 14:39:41,143 INFO  [SettingsFactory]  - Second-level cache: enabled
+2017-01-18 14:39:41,143 INFO  [SettingsFactory]  - Query cache: disabled
+2017-01-18 14:39:41,143 INFO  [SettingsFactory]  - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2017-01-18 14:39:41,144 INFO  [SettingsFactory]  - Optimize cache for minimal puts: disabled
+2017-01-18 14:39:41,144 INFO  [SettingsFactory]  - Structured second-level cache entries: disabled
+2017-01-18 14:39:41,149 INFO  [SettingsFactory]  - Echoing all SQL to stdout
+2017-01-18 14:39:41,150 INFO  [SettingsFactory]  - Statistics: disabled
+2017-01-18 14:39:41,150 INFO  [SettingsFactory]  - Deleted entity synthetic identifier rollback: disabled
+2017-01-18 14:39:41,150 INFO  [SettingsFactory]  - Default entity-mode: pojo
+2017-01-18 14:39:41,150 INFO  [SettingsFactory]  - Named query checking : enabled
+2017-01-18 14:39:41,150 INFO  [SettingsFactory]  - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2017-01-18 14:39:41,169 INFO  [SessionFactoryImpl]  - building session factory
+2017-01-18 14:39:41,175 INFO  [BasicTypeRegistry]  - Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@766653e6
+2017-01-18 14:39:41,176 INFO  [BasicTypeRegistry]  - Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@4e07b95f
+2017-01-18 14:39:41,176 INFO  [BasicTypeRegistry]  - Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@28b46423
+2017-01-18 14:39:41,176 INFO  [BasicTypeRegistry]  - Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7fc4780b
+2017-01-18 14:39:41,176 INFO  [BasicTypeRegistry]  - Type registration [blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:39:41,176 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@3b79fd76
+2017-01-18 14:39:41,176 INFO  [BasicTypeRegistry]  - Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@48c76607
+2017-01-18 14:39:41,176 INFO  [BasicTypeRegistry]  - Type registration [clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:39:41,176 INFO  [BasicTypeRegistry]  - Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@43599640
+2017-01-18 14:39:41,384 INFO  [SessionFactoryObjectFactory]  - Not binding factory to JNDI, no JNDI name configured
+2017-01-18 14:39:41,643 INFO  [Dialect]  - Using dialect: org.hibernate.dialect.HSQLDialect
+2017-01-18 14:39:41,677 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.ARTICLE
+2017-01-18 14:39:41,677 INFO  [TableMetadata]  - columns: [haveua, name, id, dmg]
+2017-01-18 14:39:41,677 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:39:41,677 INFO  [TableMetadata]  - indexes: [sys_idx_sys_pk_10035_10036]
+2017-01-18 14:39:41,690 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY
+2017-01-18 14:39:41,690 INFO  [TableMetadata]  - columns: [level, name, id]
+2017-01-18 14:39:41,691 INFO  [TableMetadata]  - foreign keys: []
+2017-01-18 14:39:41,691 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10039_10041, sys_idx_sys_pk_10038_10040]
+2017-01-18 14:39:41,705 INFO  [TableMetadata]  - table found: PUBLIC.PUBLIC.UNIQUEABILITY_ARTICLE
+2017-01-18 14:39:41,705 INFO  [TableMetadata]  - columns: [uniqueability_id, articles_id]
+2017-01-18 14:39:41,705 INFO  [TableMetadata]  - foreign keys: [fka7a4369091124935, fka7a436904851c5ce]
+2017-01-18 14:39:41,705 INFO  [TableMetadata]  - indexes: [sys_idx_sys_ct_10044_10046, sys_idx_10047, sys_idx_10049]
+2017-01-18 14:39:42,469 INFO  [SessionFactoryImpl]  - closing
