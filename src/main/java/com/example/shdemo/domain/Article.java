@@ -9,7 +9,8 @@ import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQueries({
-		@NamedQuery(name = "car.unsold", query = "Select c from Article c where c.haveUA = false")
+		@NamedQuery(name = "article.all", query = "Select a from Article a"),
+		@NamedQuery(name = "article.notHaveUA", query = "Select c from Article c where c.haveUA = false")
 })
 public class Article {
 

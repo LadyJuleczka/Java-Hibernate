@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
+import javax.xml.crypto.Data;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,6 +40,7 @@ public class ArticleManagerTest {
 	private final int NEXTLEVEL = 15;
 	private final int NEXTPOWER = 450;
 	private final boolean NEXTMAGIC = true;
+	
 	private final String NEXTNAME_1 = "Widmowe Ostrze";
 	private final int NEXTDMG_1 = 120;
 	
@@ -58,20 +61,70 @@ public class ArticleManagerTest {
 	
 	@Before
 	public void ResetDatabases() {
-		
-		
+		for (UniqueAbility uniqueAbility : articleManager.getAllUniqueAbility()) {
+			articleManager.deleteUniqueAbility(uniqueAbility);
+		}
+		for (Article article : articleManager.getAllArticle()) {
+			articleManager.deleteArticle(article);
+			;
+		}
+		UniqueAbility umiejetnosc = new UniqueAbility();
+		umiejetnosc.setName(NAMEA_1);
+		umiejetnosc.setLevel(LEVEL_1);
+		Article przedmiot = new Article();
+		przedmiot.setName(NAME_1);
+		przedmiot.setDmg(DMG_1);
+		articleManager.addArticle(przedmiot);
+		articleManager.addUniqueAbility(umiejetnosc);
+		articleManager.giveArticleUA(umiejetnosc.getId(), przedmiot.getId());
 	}
 	
 	@Test
 	public void CheckAddArticle() {
 		Article article = new Article();
-		article.setName(NAME_1);
-		article.setDmg(DMG_1);
+		article.setName(NEXTNAME_1);
+		article.setDmg(NEXTDMG_1);
 		articleManager.addArticle(article);
 		Article addedArticle = articleManager.findArticleById(article.getId());
-		assertEquals(NAME_1, addedArticle.getName());
-		assertEquals(DMG_1, addedArticle.getDmg());
+		assertEquals(NEXTNAME_1, addedArticle.getName());
+		assertEquals(NEXTDMG_1, addedArticle.getDmg());
 	}
+	
+	@Test
+	public void CheckAddUniqueAbility() {
+		UniqueAbility uniqueAbility = new UniqueAbility();
+		uniqueAbility.setName(NEXTNAMEA);
+		uniqueAbility.setLevel(NEXTLEVEL);
+
+		articleManager.addUniqueAbility(uniqueAbility);
+		UniqueAbility addedUniqueAbility = articleManager
+				.findUniqueAbilityByName(uniqueAbility.getName());
+		assertEquals(NEXTNAMEA, addedUniqueAbility.getName());
+		assertEquals(NEXTLEVEL, addedUniqueAbility.getLevel());
+	}
+	
+	
+	@Test
+	public void FindArticleById() {
+		Article articleF = articleManager.getAllArticle().get(0);
+
+		Article articleR = articleManager.findArticleById(articleF.getId());
+
+		assertEquals(articleR.getName(), articleF.getName());
+		assertEquals(articleR.getDmg(), articleF.getDmg());
+	}
+	
+	@Test
+	public void findUniqueAbilityById() {
+		UniqueAbility uniqueAbilityF = articleManager.getAllUniqueAbility().get(0);
+
+		UniqueAbility uniqueAbility = articleManager
+				.findUniqueAbilityById(uniqueAbilityF.getId());
+
+		assertEquals(uniqueAbility.getName(), uniqueAbilityF.getName());
+		assertEquals(uniqueAbility.getLevel(), uniqueAbilityF.getLevel());
+	}
+
 	
 	
 //	@Test

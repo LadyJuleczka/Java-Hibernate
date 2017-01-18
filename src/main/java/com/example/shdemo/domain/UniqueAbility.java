@@ -19,15 +19,14 @@ import javax.persistence.TemporalType;
 
 @Entity
 @NamedQueries({ 
-	@NamedQuery(name = "person.all", query = "Select p from UniqueAbility p"),
-	@NamedQuery(name = "person.byName", query = "Select p from UniqueAbility p where p.name = :name")
+	@NamedQuery(name = "uniqueAbility.all", query = "Select p from UniqueAbility p"),
+	@NamedQuery(name = "uniqueAbility.byname", query = "Select p from UniqueAbility p where p.name = :name")
 })
 public class UniqueAbility {
 
 	private Long id;
 	private String name;
 	private int level;
-	private Date addedDate = new Date();
 
 	private List<Article> articles = new ArrayList<Article>();
 
@@ -53,14 +52,6 @@ public class UniqueAbility {
 	}
 	public void setLevel(int level) {
 		this.level = level;
-	}
-
-	@Temporal(TemporalType.DATE)
-	public Date getaddedDate() {
-		return addedDate;
-	}
-	public void setaddedDate(Date addedDate) {
-		this.addedDate = addedDate;
 	}
 
 	// Be careful here, both with lazy and eager fetch type
