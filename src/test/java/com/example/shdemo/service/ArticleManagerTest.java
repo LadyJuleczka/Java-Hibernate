@@ -97,8 +97,7 @@ public class ArticleManagerTest {
 		uniqueAbility.setLevel(NEXTLEVEL);
 
 		articleManager.addUniqueAbility(uniqueAbility);
-		UniqueAbility addedUniqueAbility = articleManager
-				.findUniqueAbilityByName(uniqueAbility.getName());
+		UniqueAbility addedUniqueAbility = articleManager.findUniqueAbilityByName(uniqueAbility.getName());
 		assertEquals(NEXTNAMEA, addedUniqueAbility.getName());
 		assertEquals(NEXTLEVEL, addedUniqueAbility.getLevel());
 	}
@@ -124,7 +123,70 @@ public class ArticleManagerTest {
 		assertEquals(uniqueAbility.getName(), uniqueAbilityF.getName());
 		assertEquals(uniqueAbility.getLevel(), uniqueAbilityF.getLevel());
 	}
+	
+	@Test
+	public void CheckUpdateUniqueAbility() {
+		UniqueAbility uniqueAbility = articleManager.getAllUniqueAbility().get(0);
+		assertEquals(NAMEA_1, uniqueAbility.getName());
+		assertEquals(LEVEL_1, uniqueAbility.getLevel());
+		uniqueAbility.setLevel(NEXTLEVEL);
+		uniqueAbility.setName(NEXTNAMEA);
+		assertEquals(true, articleManager.updateUniqueAbility(uniqueAbility));
+		UniqueAbility addedUniqueAbility = articleManager.getAllUniqueAbility().get(0);
 
+		assertEquals(NEXTLEVEL, addedUniqueAbility.getLevel());
+		assertEquals(NEXTNAMEA, addedUniqueAbility.getName());
+	}
+
+	
+	@Test
+	public void CheckUpdateArticle() {
+		Article article = articleManager.getAllArticle().get(0);
+		assertEquals(NAME_1, article.getName());
+		assertEquals(DMG_1, article.getDmg());
+		article.setName(NEXTNAME_1);
+		article.setDmg(NEXTDMG_1);
+		assertEquals(true, articleManager.updateArticle(article));
+		Article updatedarticle = articleManager.getAllArticle().get(0);
+
+		assertEquals(NEXTDMG_1, updatedarticle.getDmg());
+		assertEquals(NEXTNAME_1, updatedarticle.getName());
+	}
+	
+	
+	public void CheckDeleteArticle(){
+		Article article = new Article();
+		article.setName(NEXTNAME_1);
+		article.setDmg(NEXTDMG_1);
+		articleManager.addArticle(article);
+		
+		assertEquals(NEXTNAME_1, articleManager.findArticleById(article.getId()).getName());
+		int size = articleManager.getAllArticle().size();
+		assertEquals(size,articleManager.getAllArticle().size());
+		articleManager.deleteArticle(article);
+		assertEquals(null,articleManager.findArticleById(article.getId()));
+		size--;
+		assertEquals(size,articleManager.getAllArticle().size());
+	}
+	
+	@Test
+	public void CheckDeleteUniqueAbility(){
+		UniqueAbility uniqueAbility = new UniqueAbility();
+		uniqueAbility.setName(NEXTNAMEA);
+		uniqueAbility.setLevel(NEXTLEVEL);
+		articleManager.addUniqueAbility(uniqueAbility);
+
+
+		UniqueAbility addedUniqueAbility = articleManager.findUniqueAbilityByName(uniqueAbility.getName());
+		assertEquals(NEXTNAMEA, addedUniqueAbility.getName());
+		
+		int size = articleManager.getAllUniqueAbility().size();
+		assertEquals(size,articleManager.getAllUniqueAbility().size());
+		articleManager.deleteUniqueAbility(uniqueAbility);
+		assertEquals(null,articleManager.findUniqueAbilityByName(uniqueAbility.getName()));
+		size--;
+		assertEquals(size,articleManager.getAllUniqueAbility().size());
+	}
 	
 	
 //	@Test
