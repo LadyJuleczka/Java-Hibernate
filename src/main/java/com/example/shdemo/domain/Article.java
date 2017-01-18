@@ -9,14 +9,14 @@ import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQueries({
-		@NamedQuery(name = "car.unsold", query = "Select c from Article c where c.sold = false")
+		@NamedQuery(name = "car.unsold", query = "Select c from Article c where c.haveUA = false")
 })
 public class Article {
 
 	private Long id;
-	private String make;
-	private String model;
-	private Boolean sold = false;
+	private String name;
+	private int dmg;
+	private Boolean haveUA = false;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,27 +28,27 @@ public class Article {
 		this.id = id;
 	}
 
-	public String getMake() {
-		return make;
+	public String getName() {
+		return name;
 	}
 
-	public void setMake(String make) {
-		this.make = make;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getModel() {
-		return model;
+	public int getDmg() {
+		return dmg;
 	}
 
-	public void setModel(String model) {
-		this.model = model;
+	public void setDmg(int dmg) {
+		this.dmg = dmg;
 	}
 
-	public Boolean getSold() {
-		return sold;
+	public Boolean getHaveUA() {
+		return haveUA;
 	}
 
-	public void setSold(Boolean sold) {
-		this.sold = sold;
+	public void setHaveUA(Boolean haveUA) {
+		this.haveUA = haveUA;
 	}
 }

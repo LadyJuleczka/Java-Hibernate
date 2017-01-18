@@ -7,17 +7,41 @@ import com.example.shdemo.domain.UniqueAbility;
 
 public interface ArticleManager {
 	
-	void addClient(UniqueAbility uniqueAbility);
-	List<UniqueAbility> getAllClients();
-	void deleteClient(UniqueAbility uniqueAbility);
-	UniqueAbility findClientByPin(String pin);
+	Long addArticle(Article article);
+	boolean updateArticle(Article article);
+	void deleteArticle(Article article);
+	Article findArticleById(Long id);
+	List<Article> getAllArticle();
+	List<Article> getHaveUAArticles(String name);
+	List<Article> getNotHaveUAArticles();
+	void giveArticleUA(Long uniqueAbilityId, Long ArticleId);
 	
-	Long addNewCar(Article article);
-	List<Article> getAvailableCars();
-	void disposeCar(UniqueAbility uniqueAbility, Article article);
-	Article findCarById(Long id);
-
-	List<Article> getOwnedCars(UniqueAbility uniqueAbility);
-	void sellCar(Long personId, Long carId);
+	
+	void addUniqueAbility(UniqueAbility uniqueAbility);
+	boolean updateUniqueAbility(UniqueAbility uniqueAbility);
+	void deleteUniqueAbility(UniqueAbility uniqueAbility);
+	UniqueAbility findUniqueAbilityByName(String name);
+	UniqueAbility findUniqueAbilityById(Long id);
+	List<UniqueAbility> getAllUniqueAbility();
+	
+	
+	
+	
+	
+	
+	
+	
+//	void addClient(UniqueAbility uniqueAbility);
+//	List<UniqueAbility> getAllClients();
+//	void deleteClient(UniqueAbility uniqueAbility);
+//	UniqueAbility findClientByPin(String pin);
+//	
+//	Long addNewCar(Article article);
+//	List<Article> getAvailableCars();
+//	void disposeCar(UniqueAbility uniqueAbility, Article article);
+//	Article findCarById(Long id);
+//
+//	List<Article> getOwnedCars(UniqueAbility uniqueAbility);
+//	void sellCar(Long personId, Long carId);
 
 }

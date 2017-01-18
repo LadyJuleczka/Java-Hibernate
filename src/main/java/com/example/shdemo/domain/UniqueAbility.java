@@ -20,15 +20,14 @@ import javax.persistence.TemporalType;
 @Entity
 @NamedQueries({ 
 	@NamedQuery(name = "person.all", query = "Select p from UniqueAbility p"),
-	@NamedQuery(name = "person.byPin", query = "Select p from UniqueAbility p where p.pin = :pin")
+	@NamedQuery(name = "person.byName", query = "Select p from UniqueAbility p where p.name = :name")
 })
 public class UniqueAbility {
 
 	private Long id;
-
-	private String firstName = "unknown";
-	private String pin = "";
-	private Date registrationDate = new Date();
+	private String name;
+	private int level;
+	private Date addedDate = new Date();
 
 	private List<Article> articles = new ArrayList<Article>();
 
@@ -41,35 +40,35 @@ public class UniqueAbility {
 		this.id = id;
 	}
 	
-	public String getFirstName() {
-		return firstName;
+	public String getName() {
+		return name;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Column(unique = true, nullable = false)
-	public String getPin() {
-		return pin;
+	public int getLevel() {
+		return level;
 	}
-	public void setPin(String pin) {
-		this.pin = pin;
+	public void setLevel(int level) {
+		this.level = level;
 	}
 
 	@Temporal(TemporalType.DATE)
-	public Date getRegistrationDate() {
-		return registrationDate;
+	public Date getaddedDate() {
+		return addedDate;
 	}
-	public void setRegistrationDate(Date registrationDate) {
-		this.registrationDate = registrationDate;
+	public void setaddedDate(Date addedDate) {
+		this.addedDate = addedDate;
 	}
 
 	// Be careful here, both with lazy and eager fetch type
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	public List<Article> getCars() {
+	public List<Article> getArticles() {
 		return articles;
 	}
-	public void setCars(List<Article> articles) {
+	public void setArticles(List<Article> articles) {
 		this.articles = articles;
 	}
 }
