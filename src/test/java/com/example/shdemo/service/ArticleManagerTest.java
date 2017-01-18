@@ -3,9 +3,6 @@ package com.example.shdemo.service;
 import static org.junit.Assert.assertEquals;
 
 import java.util.List;
-
-import javax.xml.crypto.Data;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -153,7 +150,7 @@ public class ArticleManagerTest {
 		assertEquals(NEXTNAME_1, updatedarticle.getName());
 	}
 	
-	
+	@Test
 	public void CheckDeleteArticle(){
 		Article article = new Article();
 		article.setName(NEXTNAME_1);
@@ -188,80 +185,93 @@ public class ArticleManagerTest {
 		assertEquals(size,articleManager.getAllUniqueAbility().size());
 	}
 	
-	
-//	@Test
-//	public void addClientCheck() {
-//
-//		List<UniqueAbility> retrievedClients = articleManager.getAllClients();
-//
-//		// If there is a client with PIN_1 delete it
-//		for (UniqueAbility client : retrievedClients) {
-//			if (client.getPin().equals(PIN_1)) {
-//				articleManager.deleteClient(client);
-//			}
-//		}
-//
-//		UniqueAbility uniqueAbility = new UniqueAbility();
-//		uniqueAbility.setFirstName(NAME_1);
-//		uniqueAbility.setPin(PIN_1);
-//		// ... other properties here
-//
-//		// Pin is Unique
-//		articleManager.addClient(uniqueAbility);
-//
-//		UniqueAbility retrievedClient = articleManager.findClientByPin(PIN_1);
-//
-//		assertEquals(NAME_1, retrievedClient.getFirstName());
-//		assertEquals(PIN_1, retrievedClient.getPin());
-//		// ... check other properties here
-//	}
-//
-//	@Test
-//	public void addCarCheck() {
-//
-//		Article article = new Article();
-//		article.setName(MAKE_1);
-//		article.setDmg(234);
-//		// ... other properties here
-//
-//		Long carId = articleManager.addNewCar(article);
-//
-//		Article retrievedCar = articleManager.findCarById(carId);
-//		assertEquals(MAKE_1, retrievedCar.getName());
-//		assertEquals(MODEL_1, retrievedCar.getDmg());
-//		// ... check other properties here
-//
-//	}
-//
-//	@Test
-//	public void sellCarCheck() {
-//
-//		UniqueAbility uniqueAbility = new UniqueAbility();
-//		uniqueAbility.setFirstName(NAME_2);
-//		uniqueAbility.setPin(PIN_2);
-//
-//		articleManager.addClient(uniqueAbility);
-//
-//		UniqueAbility retrievedPerson = articleManager.findClientByPin(PIN_2);
-//
-//		Article article = new Article();
-//		article.setName(MAKE_2);
-//		article.setDmg(23);
-//
-//		Long carId = articleManager.addNewCar(article);
-//
-//		articleManager.sellCar(retrievedPerson.getId(), carId);
-//
-//		List<Article> ownedCars = articleManager.getOwnedCars(retrievedPerson);
-//
-//		assertEquals(1, ownedCars.size());
-//		assertEquals(MAKE_2, ownedCars.get(0).getName());
-//		assertEquals(MODEL_2, ownedCars.get(0).getDmg());
-//	}
-//
-//	// @Test -
-//	public void disposeCarCheck() {
-//		// Do it yourself
-//	}
+	@Test
+	public void CheckGetAllUniqueAbility(){
+		List<UniqueAbility> addedUA_1 = articleManager.getAllUniqueAbility();
+		int size = addedUA_1.size();
+		
+		UniqueAbility uniqueAbility = new UniqueAbility();
+		uniqueAbility.setName(NEXTNAMEA);
+		uniqueAbility.setLevel(NEXTLEVEL);
+		articleManager.addUniqueAbility(uniqueAbility);
 
+		List<UniqueAbility> addedUA = articleManager.getAllUniqueAbility();
+		size++;
+		assertEquals(size,addedUA.size());
+		assertEquals(NAMEA_1,addedUA.get(0).getName());
+		assertEquals(NEXTNAMEA,addedUA.get(1).getName());
+	}
+	
+	@Test
+	public void getAllPlanesCheck(){
+		List<Article> addedArticles_1 = articleManager.getAllArticle();
+		int size = addedArticles_1.size();
+		Article article = new Article();
+		article.setName(NEXTNAME_1);
+		article.setDmg(NEXTDMG_1);
+		articleManager.addArticle(article);
+		List<Article> addedArticles = articleManager.getAllArticle();
+		size++;
+		assertEquals(size,addedArticles.size());
+		assertEquals(NAME_1,addedArticles.get(0).getName());
+		assertEquals(NEXTNAME_1,addedArticles.get(1).getName());
+	}
+	
+	@Test
+	public void CheckGetArticleWithUA(){
+		
+		List<Article> addedArticles_1 = articleManager.getAllArticle();
+		int size = addedArticles_1.size();
+		
+		Article article = new Article();
+		article.setName(NEXTNAME_1);
+		article.setDmg(NEXTDMG_1);
+		articleManager.addArticle(article);
+		
+		UniqueAbility uniqueAbility = articleManager.getAllUniqueAbility().get(0);
+		articleManager.giveArticleUA(uniqueAbility.getId(), article.getId());
+		
+		
+		List<Article> addedArticles = articleManager.getHaveUAArticles(uniqueAbility.getName());
+		size++;
+		assertEquals(size,addedArticles.size());
+		assertEquals(true,addedArticles.get(0).getHaveUA());
+		assertEquals(true,addedArticles.get(1).getHaveUA());
+		assertEquals(article.getId(),addedArticles.get(1).getId());
+	}
+	
+	@Test
+	public void CheckGetArticleWithoutUA(){
+		
+		Article article = new Article();
+		article.setName(NEXTNAME_1);
+		article.setDmg(NEXTDMG_1);
+
+		articleManager.addArticle(article);
+		List<Article> planesRetrieved = articleManager.getNotHaveUAArticles();
+		assertEquals(1,planesRetrieved.size());
+		assertEquals(article.getId(),planesRetrieved.get(0).getId());
+		assertEquals(article.getHaveUA(),false);
+	}
+	
+	@Test
+	public void CheckaddUAtoArticle(){
+		
+		Article article = new Article();
+		article.setName(NEXTNAME_1);
+		article.setDmg(NEXTDMG_1);
+		articleManager.addArticle(article);
+		
+		UniqueAbility uniqueAbility = new UniqueAbility();
+		uniqueAbility.setName(NEXTNAMEA);
+		uniqueAbility.setLevel(NEXTLEVEL);
+		articleManager.addUniqueAbility(uniqueAbility);
+		
+		articleManager.giveArticleUA(uniqueAbility.getId(), article.getId());
+		List<Article> addedArticle = articleManager.getHaveUAArticles(uniqueAbility.getName());
+
+		assertEquals(true,article.getHaveUA());
+		assertEquals(article.getId(),addedArticle.get(0).getId());
+		assertEquals(1,addedArticle.size());
+	}
 }
